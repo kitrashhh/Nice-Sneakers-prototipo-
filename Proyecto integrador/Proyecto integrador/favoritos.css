@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+::-webkit-scrollbar{
+    width: 15px;
+    background-color: rgb(36, 37, 46);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(168, 181, 221);
+    border-radius: 3px;
+
+}
+
+/*fondo de pantalla*/
+
+body{
+    background: #cfdbe2;
+    animation: fadeIn 2s ease forwards;
+}
+
+*{
+    font-family: 'Montserrat';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*panel de navegacion*/
+
+nav{
+    background: #112170;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 100;
+}
+
+nav h1{
+    position: absolute;
+    padding: 20px 50px;
+    margin-right: 20px;
+}
+
+nav ul{
+    float: right;
+    list-style: none;
+}
+
+nav ul li a{
+    color: #cfdbe2;
+    text-decoration: none;
+    padding: 0 15px;
+    transition: all .3s ;
+    padding-bottom: 8px;
+}
+
+nav ul li a:hover{
+    border-bottom: 1px solid #cfdbe2;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a span{
+display: none;
+}
+
+.menubtn{
+    font-size: 30px;
+    color: #cfdbe2;
+    float: right;
+    line-height: 80px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#menubar{
+    display: none;
+}
+
+/*categoria de favoritos*/
+
+#fav{
+    position: absolute;
+    margin: 18rem 37rem;
+    padding: 15px 5px;
+}
+
+.fa-heart-crack{
+    margin-left: 8.5rem;
+    font-size: 3rem;
+    color: #1c4583;
+}
+
+.tit{
+    margin-top: 2rem;
+    color: #112170;
+}
+
+.irse{
+    margin-left: 6.5rem;
+    margin-top: 2rem;
+    font-size: 1rem;
+    border: 2px solid #112170;
+    background: #112170;
+    color: #cfdbe2;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px 5px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.irse:hover{
+    background: transparent;
+    border: 2px solid #112170;
+    color: #112170;
+    transition: all .3s ease;
+}
+
+@media only screen and (max-width: 768px){
+
+    /*la barra azul de navegacion*/
+
+    nav{
+        position: fixed;
+        z-index: 100;
+    }
+
+    .menubtn{
+        display: block;
+    }
+
+    nav ul{
+        border: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#0f0f0f;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 100;
+        text-align: left;
+        background: rgba(15, 15, 15, 0.8);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 15px rgba(95, 154, 243, 0.3);
+    }
+
+    nav ul li{
+        border: none;
+        display: block;
+        margin: 25px 0;
+        line-height: 30px;
+        font-size: 20px;
+        transition: all .3s ease;
+    }
+
+    nav ul li:hover{
+        font-size: 25px;
+        border: none;
+        text-decoration: none;
+        transition: all .3s ease;
+    }
+
+    #menubar:checked ~ ul{
+        left: 0;
+    }
+
+    p{
+        display: block;
+    }
+
+    nav ul li a span{
+        display: inline;
+        gap: 6px;
+        border: none;
+        text-decoration: none;
+    }
+
+    /*favoritos*/
+
+    #fav{
+        margin: 15rem 10rem;
+    }
+
+    .fa-heart-crack{
+        margin-left: 3.5rem;
+        font-size: 3rem;
+
+    }
+
+    .tit{
+        text-align: center;
+    }
+
+    .irse{
+        margin-left: 1.5rem;
+        margin-top: 2rem;
+        font-size: 1rem;
+        border: 2px solid #112170;
+        background: #112170;
+        color: #cfdbe2;
+        border-radius: 10px;
+        font-size: 20px;
+        padding: 10px 5px;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+
+    /*el pie de pagina*/
+
+    footer{
+        text-align: center;
+    }
+
+    .infocja{
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 10px;
+        gap: 20px;
+    }
+
+    .dibu{
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .dibu a{
+        margin: 10px 10px;
+        font-size: 18px;
+    }
+
+    .dibu a{
+        font-size: 20px;
+    }
+
+    .dib{
+        margin: 0;
+        text-align: center;
+    }
+
+    .log{
+        margin: 0;
+        text-align: center;
+    }
+
+}

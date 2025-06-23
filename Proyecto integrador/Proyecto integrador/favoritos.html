@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="favoritos.css">
+    <script src="https://kit.fontawesome.com/13cae7644c.js" crossorigin="anonymous"></script>
+    <title>Favoritos</title>
+</head>
+<body>
+
+    <!--Menu-->
+
+    <nav>
+            <h1>LyN</h1>
+
+            <input type="checkbox" id="menubar">
+            <label for="menubar" class="menubtn">
+                <!--esta madre es para en modo celular xd-->
+                <i class="fa-solid fa-bars"></i>
+            </label>
+
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
+                    <li><a href="hombres.html">Hombres</a></li>
+                    <li><a href="mujeres.html">Mujeres</a></li>
+                    <li><a href="ninos.html">Niños</a></li>
+                    <li><a href="favoritos.css"><i class="far fa-heart"></i><span>Favoritos</span></a></li>
+                </ul>
+    </nav>
+
+    <!--Catalogo de los favoritos-->
+    <div id="fav">
+        <h2><i class="fa-solid fa-heart-crack"></i></h2>
+        <h1 class="tit">No tienes favoritos</h1>
+        <button onclick="location.href='index.html'"  class="irse">Ir al inicio</button>
+    </div>
+    
+</body>
+</html>

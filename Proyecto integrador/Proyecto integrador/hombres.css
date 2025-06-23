@@ -1,0 +1,664 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+::-webkit-scrollbar{
+    width: 15px;
+    background-color: rgb(36, 37, 46);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(168, 181, 221);
+    border-radius: 3px;
+}
+
+/*fondo de pantalla*/
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #cfdbe2;
+    animation: fadeIn 2s ease forwards;
+}
+
+*{
+    font-family: 'Montserrat';
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*panel de navegacion*/
+
+nav{
+    background: #112170;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    z-index: 100;
+    }
+
+nav h1{
+    position: absolute;
+    padding: 20px 50px;
+    margin-right: 20px;
+}
+
+nav ul{
+    float: right;
+    list-style: none;
+}
+
+nav ul li a{
+    color: #cfdbe2;
+    text-decoration: none;
+    padding: 0 15px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a span{
+display: none;
+}
+
+.menubtn{
+    font-size: 30px;
+    color: #cfdbe2;
+    float: right;
+    line-height: 80px;
+    margin-right: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#menubar{
+    display: none;
+}
+
+/*banner*/
+
+#banner{
+    width: 100%;
+    position: relative;
+    height: auto;
+    overflow: hidden;
+}
+
+#banner::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.photo{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#banner h3{
+    z-index: 2;
+    position: absolute;
+    bottom: 45%;
+    font-size: 2.5rem;
+    left: 28%;
+    color: rgb(255, 255, 255);
+}
+
+#banner .ban{
+    z-index: 2;
+    position: absolute;
+    background: transparent;
+    border: 2px solid #e7e6ee;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    bottom: 30%;
+    left: 45%;
+    color: #e7e6ee;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+/*boton d regresar*/
+
+.fa-arrow-left{
+    background: #112170;
+    color: #ffff;
+    padding: 1% 1%;
+    margin-left: 2%;
+    margin-top: 10%;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*buscador*/
+
+#buscador{
+    margin-top: -3%;
+    margin-left: 35%;
+    position:relative;
+}
+
+#buscador input{
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #112170;
+    width: 50%;
+    padding: 1em 0.3em;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+#buscador .uwu:focus{
+    border-bottom: 2px solid #112170;
+    border: none;
+}
+
+#buscador button{
+    background: #112170;
+    color: #ffff;
+    padding: 1% 2%;
+    margin-left: 2%;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/*categoria uwu*/
+
+.zap{
+    margin-top: 10%;
+    width: 200px;
+    height: 210px;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+#owo{
+    font-family: 'Montserrat';
+    display: block;
+    background: #f4f5f7;
+    box-shadow: 0px 3px 8px rgb(131, 116, 121);
+    border-radius: 20px;
+    width: 97%;
+    box-sizing: border-box;
+    margin: 2.5% auto;
+    padding: 20px;
+    transition: .5 ease;
+}
+
+.cont{
+    cursor: pointer;
+    max-width: 250px;
+    margin-left: 3.4%;
+    margin-right: 3.4%;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    transition: transform 0.3s;
+    padding: 5px;
+}
+
+.cont:hover{
+    background: #c2d0d8;
+    border-radius: 10px;
+    transform: scale(.90); 
+}
+
+.fila{
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.title{
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.price{
+    font-size: 18px;
+    font-weight: 500;
+    color: #47748d
+}
+
+/*del item seleccionado*/
+
+ /*.seleccion{
+    z-index: 1000;
+    background: #cfdbe2;
+    transition: .5s ease;
+    opacity: 1;
+    width: 30%;
+    height: 93%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 3px 8px rgb(131, 116, 121);
+    overflow: hidden;;
+ }*/
+
+.presio{
+    font-size: 18px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #47748d;
+}
+
+.tula{
+    color: #222222;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.preview{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 999; 
+}
+
+.preview.activo {
+    display: flex;
+}
+
+.preview .comtenido{
+    position: relative;
+    text-align: center;
+    background: #ffff;
+    padding: 45px 18px;
+    display: none;
+    margin: 15px;
+    width: 30%;
+    border-radius: 10px;
+}
+
+.preview .comtenido.activo {
+    display: block;
+}
+
+.preview .comtenido.active{
+    display: inline-block;
+}
+
+.preview .comtenido img{
+    max-width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.preview .comtenido .cerrar{
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.preview .comtenido .size{
+    margin-bottom: 30px;
+}
+
+.preview .comtenido button{
+    border-radius: 15px;
+    border: none;
+    padding: 15px;
+    background: #5f9af3;
+    cursor: pointer;
+}
+
+.preview .comtenido button:hover{
+    background: #4d88df;
+}
+
+.preview .comtenido .was{
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    background: #4fd170;
+    margin-left: 5%;
+}
+
+.preview .comtenido .was:hover{
+    background: #4fd170;
+}
+
+.preview .comtenido .was .fa-whatsapp{
+    font-size: 30px;
+    color: #e7e6ee;
+}
+ /*fondo borroso al abrir item*/
+
+ /*.fondo-borroso {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    backdrop-filter: blur(8px);
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 999; 
+    display: none;
+}*/
+
+/*pie de pagina*/
+
+footer{
+    background-color: #1C1D22;
+}
+
+.infocja{
+    margin: 15px auto;
+    padding: 30px 0 140px 70px;
+    color: white;
+    margin-bottom: -1%;
+    display: flex;
+    font-weight: 200;
+}
+
+.wasa{
+    display: flex;
+}
+
+i{
+    margin-top: 5%;
+    margin-right: 5%
+}
+
+.dib{
+    margin-right: 19%;
+    padding: 0;
+}
+
+.log{
+    margin-right: -5%;
+    padding: 0;
+}
+
+.contactanos{
+    margin-top: 10px;
+}
+
+.dibu{
+    margin-right: 19%;
+    padding: 0 ;
+}
+
+.dibu a{
+    margin-right: 10%;
+    margin-top: 30px;
+    font-size: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    color: #cfdbe2;
+    transition: all .3s;
+}
+
+.dibu a:hover{
+    color: #47748d;
+    transition: all .3s;
+}
+
+hr{
+    border:0.5px solid #4b4c53;
+}
+
+.final{
+    text-align: center;
+    color: #cfdbe2;
+}
+
+
+/*animacion*/
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px){
+
+
+    /*la barra azul de navegacion*/
+
+    nav{
+        position: fixed;
+        z-index: 100;
+    }
+
+    .menubtn{
+        display: block;
+    }
+
+    nav ul{
+        border: none;
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background:#0f0f0f;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+        z-index: 100;
+        text-align: left;
+        background: rgba(15, 15, 15, 0.8);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 15px rgba(95, 154, 243, 0.3);
+    }
+
+    nav ul li{
+        border: none;
+        display: block;
+        margin: 25px 0;
+        line-height: 30px;
+        font-size: 20px;
+        transition: all .3s ease;
+    }
+
+    nav ul li:hover{
+        font-size: 25px;
+        border: none;
+        text-decoration: none;
+        transition: all .3s ease;
+    }
+
+    #menubar:checked ~ ul{
+        left: 0;
+    }
+
+    p{
+        display: block;
+    }
+
+    nav ul li a span{
+        display: inline;
+        gap: 4px;
+        border: none;
+        text-decoration: none;
+    }
+
+    /*banner*/
+
+    .photo{
+        height: 300px;
+    }
+
+    #banner{
+        height: 300px;
+    }
+
+    #banner .ban{
+        bottom: 18%;
+        font-size: 0.9rem;
+        left: 42%;
+    }
+
+    #banner h3{
+        font-size: 1.5rem;
+        bottom: 40%;
+        left: 18%;
+    }
+
+    /*boton de regresar*/
+
+    .fa-arrow-left{
+        margin-top: 25%;
+        padding: 3%;
+    }
+
+    /*buscador*/
+
+    #buscador{
+        margin-top: 5%;
+    }
+
+    #buscador input{
+        width: 90%;
+        margin-left: -30%;
+    }
+
+    #buscador button{
+        padding: 3% 3%;
+    }
+
+    /*modal*/
+
+    .presio{
+        font-size: 17px;
+    }
+
+    .preview .comtenido{
+        width: 80%;
+        max-height: 80vh;
+    }
+
+    .preview .comtenido img{
+        width: 60%;
+        height: 90%;
+    }
+
+    .preview .comtenido .cerrar{
+        position: absolute;
+        right: 8px;
+        top: 8px;
+        font-weight: 600;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+.preview .comtenido .size{
+    margin-bottom: 30px;
+}
+
+.preview .comtenido button{
+    border-radius: 15px;
+    border: none;
+    padding: 15px;
+    background: #5f9af3;
+    cursor: pointer;
+}
+
+.preview .comtenido button:hover{
+    background: #4d88df;
+}
+
+.preview .comtenido .was{
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    background: #31d367;
+}
+
+
+    /*el pie de pagina*/
+
+    footer{
+        text-align: center;
+    }
+
+    .infocja{
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 10px;
+        gap: 20px;
+    }
+
+    .dibu{
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .dibu a{
+        margin: 10px 10px;
+        font-size: 18px;
+    }
+
+    .dibu a{
+        font-size: 20px;
+    }
+
+    .dib{
+        margin: 0;
+        text-align: center;
+    }
+
+    .log{
+        margin: 0;
+        text-align: center;
+    }
+
+    /*seccion de ofertas*/
+
+    #vermas{
+        margin-top: 15%;
+    }
+
+    .mas{
+        margin-left: 80%;
+        margin-top: -5%;
+        font-size: 15px;
+    }
+
+    .ver{
+        margin-top: 15%;
+    }
+
+    #owo{
+        width: 85%;
+        margin: 2.5% auto;
+        padding: 20px;
+    }
+
+    
+}
