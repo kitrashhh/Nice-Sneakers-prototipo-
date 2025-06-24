@@ -74,6 +74,7 @@ display: none;
 #menubar{
     display: none;
 }
+
 /*boton d regresar*/
 
 .fa-arrow-left{
@@ -81,11 +82,20 @@ display: none;
     color: #ffff;
     padding: 1% 1%;
     margin-left: 2%;
-    margin-top: 10%;
+    margin-top: 15%;
     border-radius: 50px;
     border: none;
     cursor: pointer;
     text-decoration: none;
+    border: 2px solid #112170;
+    transition: all .3s ease;
+}
+
+.fa-arrow-left:hover{
+    background: transparent;
+    border: 2px solid #112170;
+    transition: all .3s ease;
+    color: #112170;
 }
 
 /*buscador*/
@@ -120,6 +130,147 @@ display: none;
     border: none;
     cursor: pointer;
 }
+
+/*filtrar*/
+
+
+.filtrar{
+    display: flex;
+    background: transparent;
+    text-align: center;
+    gap: 8px;
+    margin-left: 90%;
+    margin-top: -3%;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #112170;
+    border: 2px solid #112170;
+    color: #cfdbe2;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.filtrar:hover{
+    background: transparent;
+    border: 2px solid #112170;
+    color: #112170;
+    transition: all .3s ease;
+}
+
+/*eliminar filtros*/
+.filtros .limpiar{
+    background: transparent;
+    border: none;
+    color: #cfdbe2;
+    margin: 15px 0;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.filtros .limpiar:hover{
+    border: 1px solid #cfdbe2;
+}
+
+.filtros{
+    position: fixed;
+    top: 80px;
+    right: 0%;
+    background: #0f0f0f;
+    width: 450px;
+    padding: 20px;
+    z-index: 9999;
+    color: #cfdbe2;
+    height: 100%;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(95, 154, 243, 0.3);
+}
+
+.filtrar .testo{
+    cursor: pointer;
+}
+
+.filtros.visible{
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.filtros ul{
+    list-style: none;
+    padding-bottom: 30px;
+}
+
+.filtros ul li label{
+    cursor: pointer;
+}
+
+.filtros ul li ul{
+    margin-left: 10%;
+    margin-right: 50%;
+    margin-top: 5%;
+}
+
+.filtros ul li ul li{
+    padding: 13px;
+    padding-left: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cerrar{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.subt{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menver{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.menver li{
+    margin-top: 30px;
+}
+
+.menver input[type="checkbox"]{
+    display: none;
+}
+
+.menver input[type="checkbox"]:checked + label {
+  border: 1px solid #5f9af3;
+  padding: 10px;
+}
+
+input#talla[type="checkbox"]:checked + label + .menver{
+    max-height: 500px;
+}
+
+input#color[type="checkbox"]:checked + label + .menver{
+    max-height: 500px;
+}
+
+input#marca[type="checkbox"]:checked + label + .menver{
+    max-height: 500px;
+}
+
 
 /*categoria uwu*/
 
@@ -522,6 +673,14 @@ hr{
     background: #31d367;
 }
 
+/*filtros*/
+
+    .filtrar{
+        margin-top: -23%;
+        margin-left: 80%;
+        font-size: 15px;
+    }
+
 
     /*el pie de pagina*/
 
@@ -579,6 +738,7 @@ hr{
     #owo{
         width: 85%;
         margin: 2.5% auto;
+        margin-top: 20%;
         padding: 20px;
     }
 

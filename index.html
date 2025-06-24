@@ -162,9 +162,13 @@
         
     </section>
 
+    <!--Menu de filtros-->
+
     <div class="filtros" id="menufiltros">
 
         <span class="cerrar" id="cerrarfiltro">X</span>
+
+        <button type="button" id="limpiarfiltros" class="limpiar">Limpiar filtros</button>
 
         <ul class="menhor">
 
@@ -580,6 +584,19 @@
             menu.classList.remove("visible");
         });
 
+    </script>
+
+    <script>
+
+        /*borrar filtros*/
+
+        document.getElementById("limpiarfiltros").addEventListener("click", () => {
+        const checkboxes = document.querySelectorAll('.filtros input[type="checkbox"]:not([hidden])');
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+});
 
     </script>
 

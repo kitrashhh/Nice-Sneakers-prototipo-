@@ -45,14 +45,21 @@
 
     </div>
 
-    <!--Catalogo-->
+    <!--menu de filtros-->
+
+    <button class="filtrar">
+            <i class="fa-solid fa-filter"></i>
+            <span class="testo">Filtrar</span>
+    </button>
+
+        <!--Catalogo-->
 
     <section id="owo">
 
         <div class="fila">
             <div class="cont" data-name="p-1">
 
-                <img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/los-pasteles-mas-horribles-para-cumpleaos-frozen.jpg" class="zap">
+                <img src="productos/un-zapato-de-la-zapatilla-de-deporte-blanco-aislado-en-blanco.jpg" class="zap">
                 <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
                 <p class="price">$000</p>
 
@@ -60,7 +67,7 @@
 
             <div class="cont" data-name="p-2">
 
-                <img src="https://cdn2.cocinadelirante.com/sites/default/files/styles/gallerie/public/los-pasteles-mas-horribles-para-cumpleaos-frozen.jpg" class="zap">
+                <img src="productos/p1.jpg" class="zap">
                 <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
                 <p class="price">$000</p>
 
@@ -68,7 +75,7 @@
 
             <div class="cont" data-name="p-3">
 
-                <img src="https://i.pinimg.com/236x/15/1a/44/151a44cff214395c78832e7d22ff10ce.jpg" class="zap">
+                <img src="productos/p3.jpg" class="zap">
                 <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
                 <p class="price">$000</p>
 
@@ -76,7 +83,7 @@
 
             <div class="cont" data-name="p-4">
 
-                <img src="https://i.pinimg.com/236x/15/1a/44/151a44cff214395c78832e7d22ff10ce.jpg" class="zap">
+                <img src="productos/p4.jpg" class="zap">
                 <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
                 <p class="price">$000</p>
 
@@ -84,7 +91,7 @@
 
             <div class="cont" data-name="p-5">
 
-                <img src="https://i.pinimg.com/236x/15/1a/44/151a44cff214395c78832e7d22ff10ce.jpg" class="zap">
+                <img src="productos/sneakers-5408667.png" class="zap">
                 <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
                 <p class="price">$000</p>
 
@@ -92,7 +99,7 @@
 
             <div class="cont" data-name="p-6">
 
-                <img src="https://i.pinimg.com/236x/15/1a/44/151a44cff214395c78832e7d22ff10ce.jpg" class="zap">
+                <img src="productos/sneakers-5408674.png" class="zap">
                 <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
                 <p class="price">$000</p>
 
@@ -100,22 +107,111 @@
 
             <div class="cont" data-name="p-7">
 
-                <img src="https://i.pinimg.com/236x/15/1a/44/151a44cff214395c78832e7d22ff10ce.jpg" class="zap">
+                <img src="https://images.unsplash.com/photo-1608667508764-33cf0726b13a?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="zap">
                 <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
                 <p class="price">$000</p>
 
             </div>
             
-            <div class="cont" data-name="p-8">
-
-                <img src="https://i.pinimg.com/236x/15/1a/44/151a44cff214395c78832e7d22ff10ce.jpg" class="zap">
-                <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
-                <p class="price">$000</p>
-
-            </div>
         </div>
 
     </section>
+
+     <div class="fondo-borroso oculto"></div>
+
+         <!--Menu de filtros-->
+
+    <div class="filtros" id="menufiltros">
+
+        <span class="cerrar" id="cerrarfiltro">X</span>
+
+        <button type="button" id="limpiarfiltros" class="limpiar">Limpiar filtros</button>
+
+        <ul class="menhor">
+
+            <li>
+                <input type="checkbox" id="talla" hidden>
+                <label for="talla" class="subt"><i class="fa-solid fa-ruler"></i>Talla</label>
+                <ul class="menver">
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia1">
+                        <label for="taia1">21 cm</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia2">
+                        <label for="taia2">22 cm</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia3">
+                        <label for="taia3">23 cm</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia4">
+                        <label for="taia4">24 cm</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia5">
+                        <label for="taia5">25 cm</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="color" hidden>
+                <label for="color" class="subt"><i class="fa-solid fa-palette"></i>Color</label>
+                <ul class="menver">
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor1">
+                        <label for="kolor1">Negro</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor2">
+                        <label for="kolor2">Blanco</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor3">
+                        <label for="kolor3">Rojo</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor4">
+                        <label for="kolor4">Azul</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor5">
+                        <label for="kolor5">Rosa</label>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <input type="checkbox" id="marca" hidden>
+                <label for="marca" class="subt"><i class="fa-solid fa-tags"></i>Marca</label>
+                <ul class="menver">
+                    <li tabindex="0">
+                        <input type="checkbox" id="marka1">
+                        <label for="marka1">Nike</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="marka2">
+                        <label for="marka2">Puma</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="marka3">
+                        <label for="marka3">Converse</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="marka4">
+                        <label for="marka4">Reebok</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="marka5">
+                        <label for="marka5">Adidas</label>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+     </div>
+
+     
 
      <div class="fondo-borroso oculto"></div>
 
@@ -127,7 +223,7 @@
             <div class="cerrar">
                 X
             </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
+            <img src="productos/un-zapato-de-la-zapatilla-de-deporte-blanco-aislado-en-blanco.jpg" class="pluc">
                 <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
                 <p class="presio">$4500</p>
             <div class="detalles">
@@ -148,7 +244,7 @@
             <div class="cerrar">
                 X
             </div>
-            <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1089&q=80" class="pluc">
+            <img src="productos/p1.jpg" class="pluc">
                 <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
                 <p class="presio">$4500</p>
             <div class="detalles">
@@ -162,6 +258,7 @@
                         </select>
                     </div>
                     <button>Agregar al carrito</button>
+                    <button class="was"><i class="fa-brands fa-whatsapp"></i></button>
                 </div>
         </div>
 
@@ -169,7 +266,7 @@
             <div class="cerrar">
                 X
             </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
+            <img src="productos/p3.jpg" class="pluc">
                 <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
                 <p class="presio">$4500</p>
             <div class="detalles">
@@ -183,6 +280,7 @@
                         </select>
                     </div>
                     <button>Agregar al carrito</button>
+                    <button class="was"><i class="fa-brands fa-whatsapp"></i></button>
                 </div>
         </div>
 
@@ -190,7 +288,7 @@
             <div class="cerrar">
                 X
             </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
+            <img src="productos/p4.jpg" class="pluc">
                 <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
                 <p class="presio">$4500</p>
             <div class="detalles">
@@ -204,6 +302,7 @@
                         </select>
                     </div>
                     <button>Agregar al carrito</button>
+                    <button class="was"><i class="fa-brands fa-whatsapp"></i></button>
                 </div>
         </div>
 
@@ -211,7 +310,7 @@
             <div class="cerrar">
                 X
             </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
+            <img src="productos/sneakers-5408667.png" class="pluc">
                 <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
                 <p class="presio">$4500</p>
             <div class="detalles">
@@ -225,6 +324,7 @@
                         </select>
                     </div>
                     <button>Agregar al carrito</button>
+                    <button class="was"><i class="fa-brands fa-whatsapp"></i></button>
                 </div>
         </div>
 
@@ -232,7 +332,7 @@
             <div class="cerrar">
                 X
             </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
+            <img src="productos/sneakers-5408674.png" class="pluc">
                 <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
                 <p class="presio">$4500</p>
             <div class="detalles">
@@ -246,6 +346,7 @@
                         </select>
                     </div>
                     <button>Agregar al carrito</button>
+                    <button class="was"><i class="fa-brands fa-whatsapp"></i></button>
                 </div>
         </div>
 
@@ -253,7 +354,7 @@
             <div class="cerrar">
                 X
             </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
+            <img src="https://images.unsplash.com/photo-1608667508764-33cf0726b13a?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="pluc">
                 <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
                 <p class="presio">$4500</p>
             <div class="detalles">
@@ -267,6 +368,7 @@
                         </select>
                     </div>
                     <button>Agregar al carrito</button>
+                    <button class="was"><i class="fa-brands fa-whatsapp"></i></button>
                 </div>
         </div>
 
@@ -288,6 +390,7 @@
                         </select>
                     </div>
                     <button>Agregar al carrito</button>
+                    <button class="was"><i class="fa-brands fa-whatsapp"></i></button>
                 </div>
         </div>
 
@@ -414,6 +517,39 @@
         <br>
         <br>
     </footer>
+
+    <script>
+
+        const btnfiltrar = document.querySelectorAll(".filtrar");
+        const menu = document.getElementById("menufiltros");
+        const btncerrar = document.getElementById("cerrarfiltro");
+
+        btnfiltrar.forEach((boton) =>{
+                boton.addEventListener("click", () =>{
+                menu.classList.add("visible");
+            });
+        })
+        
+
+        btncerrar.addEventListener("click", () =>{
+            menu.classList.remove("visible");
+        });
+        
+    </script>
+
+    <script>
+
+        /*borrar filtros*/
+
+        document.getElementById("limpiarfiltros").addEventListener("click", () => {
+        const checkboxes = document.querySelectorAll('.filtros input[type="checkbox"]:not([hidden])');
+        checkboxes.forEach(checkbox => {
+            checkbox.checked = false;
+        });
+
+});
+
+    </script>
 
     
 </body>

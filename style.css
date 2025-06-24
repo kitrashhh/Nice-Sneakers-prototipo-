@@ -231,6 +231,21 @@ display: none;
     transition: all .3s ease;
 }
 
+/*eliminar filtros*/
+.filtros .limpiar{
+    background: transparent;
+    border: none;
+    color: #cfdbe2;
+    margin: 15px 0;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.filtros .limpiar:hover{
+    border: 1px solid #cfdbe2;
+}
+
 .filtros{
     position: fixed;
     top: 80px;
@@ -263,7 +278,8 @@ display: none;
 
 .filtros ul{
     list-style: none;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
+    margin-top: 5%;
 }
 
 .filtros ul li label{
@@ -615,7 +631,7 @@ hr{
 
     #banner h3{
         font-size: 2rem;
-        bottom: 40%;
+        bottom: 50%;
         left: 28%;
     }
 
@@ -824,7 +840,7 @@ hr{
     }
 
     
-
+ 
     /*items*/
 
     .pluc{
