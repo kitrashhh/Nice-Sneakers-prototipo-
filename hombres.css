@@ -110,7 +110,7 @@ display: none;
     position: absolute;
     bottom: 45%;
     font-size: 2.5rem;
-    left: 28%;
+    left: 35%;
     color: rgb(255, 255, 255);
 }
 
@@ -132,51 +132,221 @@ display: none;
 /*boton d regresar*/
 
 .fa-arrow-left{
-    background: #112170;
+    display: inline-flex;
+    background: #1c4583;
     color: #ffff;
     padding: 1% 1%;
-    margin-left: 2%;
-    margin-top: 10%;
+    margin-left: 25px;
+    margin-top: 80px;
     border-radius: 50px;
     border: none;
     cursor: pointer;
     text-decoration: none;
+    border: 2px solid #1c4583;
+    transition: all .3s ease;
 }
+
+.fa-arrow-left:hover{
+        background: transparent;
+        border: 2px solid #1c4583;
+        color: #1c4583;
+            transition: all .3s ease;
+
+    }
 
 /*buscador*/
 
 #buscador{
-    margin-top: -3%;
-    margin-left: 35%;
+    margin-top: 3%;
+    margin-left: 3%;
     position:relative;
+    animation: slideInFromLeft 1s ease forwards;
+
 }
 
 #buscador input{
     background-color: transparent;
     border: none;
-    border-bottom: 2px solid #112170;
-    width: 50%;
+    border-bottom: 2px solid #1c4583;
+    width: 85%;
     padding: 1em 0.3em;
     outline: none;
     transition: border-color 0.2s ease;
+    margin-left: 1%;
 }
 
 #buscador .uwu:focus{
-    border-bottom: 2px solid #112170;
+    border-bottom: 2px solid #1c4583;
     border: none;
 }
 
 #buscador button{
-    background: #112170;
-    color: #ffff;
-    padding: 1% 2%;
+    background: #1c4583;
+    border: 2px solid #1c4583;
+    color: #cfdbe2;
+    font-size: 20px;
+    padding: 15px;
     margin-left: 2%;
-    border-radius: 10px;
+    border-radius: 50%;
     border: none;
     cursor: pointer;
+    transition: all .3s ease;
+}
+
+#buscador button:hover{
+    background: transparent;
+    color: #1c4583;
+    transition: all .3s ease;
+    border: 2px solid #1c4583;
+    color: #1c4583;
 }
 
 
+/*Menu de filtros*/
+
+.filtrar{
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    gap: 8px;
+    margin-left: 90%;
+    margin-top: -140px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #1c4583;
+    border: 2px solid #1c4583;
+    border: #1c4583;
+    color: #cfdbe2;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.filtrar:hover{
+    background: transparent;
+    border: 2px solid #1c4583;
+    color: #1c4583;
+    transition: all .3s ease;
+}
+
+/*eliminar filtros*/
+.filtros .limpiar{
+    background: transparent;
+    border: none;
+    color: #cfdbe2;
+    margin: 15px 0;
+    font-size: 1.5rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.filtros .limpiar:hover{
+    border: 2px solid #cfdbe2;
+    border-radius: 10px;
+}
+
+.filtros{
+    position: fixed;
+    top: 80px;
+    right: 0%;
+    background: #0f0f0f;
+    width: 450px;
+    padding: 20px;
+    z-index: 9999;
+    color: #cfdbe2;
+    height: 100%;
+    overflow-y: auto;
+    opacity: 0;
+    transform: translateX(100%);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    background: rgba(15, 15, 15, 0.8);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(95, 154, 243, 0.3);
+}
+
+.filtrar .testo{
+    cursor: pointer;
+}
+
+.filtros.visible{
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+}
+
+.filtros ul{
+    list-style: none;
+    padding-bottom: 40px;
+    margin-top: 5%;
+}
+
+.filtros ul li label{
+    cursor: pointer;
+}
+
+.filtros ul li ul{
+    margin-left: 10%;
+    margin-right: 50%;
+    margin-top: 5%;
+}
+
+.filtros ul li ul li{
+    padding: 13px;
+    padding-left: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cerrar{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.subt{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.menver{
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    list-style: none;
+    padding-left: 10px;
+}
+
+.menver li{
+    margin-top: 30px;
+}
+
+.menver input[type="checkbox"]{
+    display: none;
+}
+
+.menver input[type="checkbox"]:checked + label {
+  border: 2px solid #cfdbe2;
+  border-radius: 10px;
+  padding: 10px;
+  transition: all .3s ease;
+}
+
+input#talla[type="checkbox"]:checked + label + .menver{
+    max-height: 500px;
+}
+
+input#color[type="checkbox"]:checked + label + .menver{
+    max-height: 500px;
+}
+
+input#marca[type="checkbox"]:checked + label + .menver{
+    max-height: 500px;
+}
 
 /*categoria uwu*/
 
@@ -207,10 +377,13 @@ display: none;
     margin-left: 3.4%;
     margin-right: 3.4%;
     text-align: center;
-    top: 0;
+    margin-top: 4%;
+    margin-bottom: 4%;
     bottom: 0;
     transition: transform 0.3s;
-    padding: 5px;
+    padding: 25px;
+    background: #ffff;
+    border-radius: 10px;
 }
 
 .cont:hover{
@@ -258,7 +431,7 @@ display: none;
 
 .presio{
     font-size: 18px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-weight: 500;
     color: #47748d;
 }
@@ -266,7 +439,7 @@ display: none;
 .tula{
     color: #222222;
     font-size: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
 }
 
 .preview{
@@ -311,7 +484,7 @@ display: none;
     max-height: 250px;
     object-fit: contain;
     display: block;
-    margin: 0 auto 10px auto;
+    margin: 0 auto 15px auto;
 }
 
 .preview .comtenido .cerrar{
@@ -339,20 +512,33 @@ display: none;
 }
 
 .preview .comtenido .was{
-    border-radius: 50%;
+    border-radius: 15px;
     border: none;
-    padding: 10px;
-    background: #4fd170;
-    margin-left: 5%;
+    padding: 5px 25px;
+    background: #25D366;
+    margin-left: 30%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    gap: 5px;
 }
 
 .preview .comtenido .was:hover{
-    background: #4fd170;
+    background: #25D366;
 }
 
 .preview .comtenido .was .fa-whatsapp{
-    font-size: 30px;
-    color: #e7e6ee;
+    font-size: 35px;
+    margin-bottom: 5%;
+    color: #f3fafe;
+}
+
+.preview .comtenido .was span{
+    color: #f3fafe;
+    font-weight: 500;
+    font-size: 1rem;
+
 }
  /*fondo borroso al abrir item*/
 
@@ -482,7 +668,7 @@ hr{
     nav ul li{
         border: none;
         display: block;
-        margin: 25px 0;
+        margin: 50px 10px;
         line-height: 30px;
         font-size: 20px;
         transition: all .3s ease;
@@ -529,29 +715,46 @@ hr{
     #banner h3{
         font-size: 1.5rem;
         bottom: 40%;
-        left: 18%;
+        left: 20%;
     }
 
     /*boton de regresar*/
 
     .fa-arrow-left{
-        margin-top: 25%;
+        margin-top: 10%;
+        margin-bottom: -25%;
+        margin-left: 8%;
         padding: 3%;
+    }
+
+    /*boton de filtros*/
+
+.filtrar{
+        position: absolute;
+        margin-top: -25%;
+        margin-left: 80%;
+        font-size: 15px;
+    }
+
+    .filtrar .testo{
+        display: none;
     }
 
     /*buscador*/
 
     #buscador{
-        margin-top: 5%;
+        margin-top: 10%;
     }
 
     #buscador input{
-        width: 90%;
-        margin-left: -30%;
+        width: 65%;
+        margin-left: 4%;
     }
 
     #buscador button{
         padding: 3% 3%;
+        margin-left: 5%;
+        font-size: 15px;
     }
 
     /*modal*/
@@ -596,9 +799,9 @@ hr{
 }
 
 .preview .comtenido .was{
-    border-radius: 50%;
+    border-radius: 15px;
     border: none;
-    padding: 10px;
+    padding: 5px 15px;
     background: #31d367;
 }
 
@@ -659,6 +862,7 @@ hr{
     #owo{
         width: 85%;
         margin: 2.5% auto;
+        margin-top: 5%;
         padding: 20px;
     }
 
