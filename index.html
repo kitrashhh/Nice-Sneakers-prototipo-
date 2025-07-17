@@ -5,12 +5,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loading.css">
     <script src="script.js" defer></script>
     <script type="module" src="productos.js" defer></script>
     <script src="https://kit.fontawesome.com/13cae7644c.js" crossorigin="anonymous"></script>
     <title>Nice Sneakers</title>
 </head>
 <body>
+
+    <!--Cargando-->
+
+    <div class="loading">
+        <div class="ring"></div>
+        <span>Cargando...</span>
+    </div>
+
+    <!--js para que el loading desaparezca-->
+    <script>
+
+        //si la pagina acaba de recargar, muestra el loading
+        if(sessionStorage.getItem('paginaYaCargada') !== 'true') {
+
+            //muestra el loading solo la primera vez que se carga la pagina
+            document.querySelector('.loading').classList.remove('hide');
+
+            //cuando la pagina se haya cargado, oculta el loading
+            window.addEventListener('load', function() { 
+                setTimeout(function(){
+                    document.querySelector('.loading').classList.add('hide');
+
+                    //marca que la pagina ya se ha cargado, para que no vuelva a mostrar el loading
+                    sessionStorage.setItem('paginaYaCargada', 'true');
+                }, timeout = 1500); //el tiempo que dura el loading en segundos, 1 segundo = 1000 milisegundos
+            });
+        } else {
+
+            //si la pagina ya se ha cargado, oculta el loading
+            document.querySelector('.loading').classList.add('hide');
+        }
+
+        //resetear la variable de sessionStorage cuando se recarga la pagina (F5)
+        window.addEventListener('beforeunload', function() {
+            sessionStorage.removeItem('paginaYaCargada');
+        });
+    </script>
 
     <!--Menu-->
 
@@ -45,8 +83,8 @@
 
     <div id="buscador">
 
-        <button id="srch"><i class="fa-solid fa-magnifying-glass"></i></button>
         <input type="search" id="busca" placeholder="Busque aquí...">
+        <button id="srch"><i class="fa-solid fa-magnifying-glass"></i></button>
 
     </div>
 
@@ -161,6 +199,55 @@
                         </div>
         
     </section>
+
+    <!--Categorias generales-->
+
+    <div class="categorias">
+        
+        <h2 class="titi">Categorías generales</h2>
+
+        <div class="categorias-cont">
+
+            <!--hombres-->
+            <article class="cat">
+
+                <img src="productos/hombre-en-forma-de-tiro-completo-saltando-al-aire-libre.jpg" class="img-cat" alt="Categoria de hombres">
+
+                <h3 class="categoria-titulo">Categoria de hombres</h3>
+
+                <a href="hombres.html" class="men-btn">Ver ahora</a>
+
+            </article>
+
+            <!--mujeres-->
+            <article class="cat">
+                
+                <img src="productos/eric-rai-F6D-5emCNHU-unsplash.jpg" class="img-cat" alt="Categoria de mujeres">
+                
+                <div class="inf">
+                    <h3 class="categoria-titulo">Categoria de mujeres</h3>
+                </div>
+
+                <a href="mujeres.html" class="men-btn">Ver ahora</a>
+
+            </article>
+
+            <!--niños-->
+            <article class="cat">
+                
+                <img src="productos/nino-sentado-en-las-escaleras-con-el-telefono-inteligente-en-la-mano-y-penique-verde-viendo-videos-graciosos (1).jpg" class="img-cat" alt="Categoria de niños">
+                
+                <div class="inf">
+                    <h3 class="categoria-titulo">Categoria de niños</h3>
+                </div>
+
+                <a href="ninos.html" class="men-btn">Ver ahora</a>
+
+            </article>
+
+        </div>
+
+    </div>
 
     <!--Menu de filtros-->
 
@@ -540,12 +627,16 @@
                     <p class="contactanos">Ubicación: djkhfehfek</p>
                 </div>
             </div>
-             <div class="col-lg-5">
+             <div class="log">
+                <h4 class="lo">*logo de la empresa*</h4>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.99144060821!2d2.292292615509614!3d48.85837360866178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTorre%20Eiffel!5e0!3m2!1ses!2smx!4v1624523797308!5m2!1ses!2smx"
                     class="h-100 w-100" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
-            </div>
         </div>
    
         <hr>

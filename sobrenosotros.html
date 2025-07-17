@@ -2,14 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="sobrenosotros.css">
+    <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/13cae7644c.js" crossorigin="anonymous"></script>
-    <title>Sobre Nosotros</title>
+    <link rel="stylesheet" href="sobrenosotros.css">
+    <link rel="stylesheet" href="loading.css">
+    <title>Categoria 1</title>
 </head>
 <body>
 
-    <!--Menu-->
+    <!--Cargando-->
+
+    <div class="loading">
+        <div class="ring"></div>
+        <span>Cargando...</span>
+    </div>
+
+    <!--js para que el loading desaparezca-->
+    <script>
+        if(sessionStorage.getItem('paginaYaCargada') !== 'true') {
+            document.querySelector('.loading').classList.remove('hide');
+            window.addEventListener('load', function() {
+                setTimeout(function(){
+                    document.querySelector('.loading').classList.add('hide');
+                    sessionStorage.setItem('paginaYaCargada', 'true');
+                }, timeout = 1500);
+            });
+        } else {
+            document.querySelector('.loading').classList.add('hide');
+        }
+
+        window.addEventListener('beforeunload', function() {
+            sessionStorage.removeItem('paginaYaCargada');
+        });
+    </script>
+
+    <!--menu-->
 
     <nav>
             <h1>LyN</h1>
@@ -29,24 +58,39 @@
                 </ul>
     </nav>
 
-    <!--Sobre nosotros-->
-    <section id="nosotros" class="sbre">
+    <!--Banner-->
 
-        <h2>Nice Sneakers</h2>
+    <section id="banner">
+        <img src="productos/marat-khairat-IdTzN7zAVaY-unsplash.jpg" class="photo">
+       <h3>Sobre Nosotros</h3>
+    </div>    
+    </section>
 
-        <div class="apartado">
+        <!--Sobre nosotros-->
+
+    <h2>Nice Sneakers</h2>
+
+    <div class="apar">
+    <section class="nosotross">
+
+            <div class="apartado">
             <h3>Sobre nosotros</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos dolore blanditiis molestias esse accusantium? Impedit magni, doloremque, repudiandae ab mollitia reprehenderit aliquam quo cum dignissimos dolorem commodi a delectus officia?<br><br> Donec a sem in enim tempus blandit. Nullam a nisi nulla. Quisque venenatis odio lobortis, pretium metus vitae, egestas enim. Quisque id neque eu magna pretium commodo. Sed tempus magna nulla, nec aliquam neque tempor et. Donec maximus, augue tempus ullamcorper condimentum, sapien felis rutrum ex, quis dapibus lectus dui a tortor. Phasellus malesuada odio et odio semper mattis. Sed sed pharetra nisl. Sed id urna a est pulvinar tempor.</p>
         </div>
 
-        <div class="aparta2">
+    </section>
+
+    <section class="nosotross">
+
+        <div class="apartado">
             <h3>Nuestra mision</h3>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eos dolore blanditiis molestias esse accusantium? Impedit magni, doloremque, repudiandae ab mollitia reprehenderit aliquam quo cum dignissimos dolorem commodi a delectus officia?<br><br> Donec a sem in enim tempus blandit. Nullam a nisi nulla. Quisque venenatis odio lobortis, pretium metus vitae, egestas enim. Quisque id neque eu magna pretium commodo. Sed tempus magna nulla, nec aliquam neque tempor et.</p>
         </div>
 
     </section>
+    </div>
 
-        <footer>
+    <footer>
         <div class="infocja">
             <div class="dibu">
                 <p>Síguenos en nuestras redes</p>
@@ -70,13 +114,19 @@
                     <p class="contactanos">Ubicación: djkhfehfek</p>
                 </div>
             </div>
-            <div class="col-lg-5">
+
+            <div class="log">
+                <h4 class="lo">*logo de la empresa*</h4>
+            </div>
+            
+        </div>
+
+        <div class="col-lg-5">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.99144060821!2d2.292292615509614!3d48.85837360866178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTorre%20Eiffel!5e0!3m2!1ses!2smx!4v1624523797308!5m2!1ses!2smx"
                     class="h-100 w-100" style="border:0;" allowfullscreen="" loading="lazy">
                 </iframe>
             </div>
-        </div>
    
         <hr>
         <br>
@@ -85,6 +135,7 @@
         <br>
         <br>
     </footer>
+
     
 </body>
 </html>
