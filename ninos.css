@@ -99,18 +99,32 @@ display: none;
     z-index: 1;
 }
 
+
 .photo{
     width: 100%;
     height: auto;
     display: block;
 }
 
+.banner-cont{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
 #banner h3{
     z-index: 2;
-    position: absolute;
-    bottom: 45%;
+    margin-bottom: 20px;
     font-size: 2.5rem;
-    left: 37%;
     color: rgb(255, 255, 255);
 }
 
@@ -122,8 +136,7 @@ display: none;
     border-radius: 10px;
     font-size: 20px;
     font-weight: 500;
-    bottom: 30%;
-    left: 45%;
+    margin-top: 170px;
     color: #112170;
     padding: 15px;
     cursor: pointer;
@@ -138,29 +151,38 @@ display: none;
 }
 
 
+/*division regresar y menu filtros*/
+
+.division{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    margin-top: 60px;
+}
+
 /*boton d regresar*/
 
 .fa-arrow-left{
+    display: inline-flex;
     background: #1c4583;
     color: #ffff;
-    padding: 1% 1%;
-    margin-left: 2%;
-    margin-top: 5%;
-    margin-bottom: -10%;
-    border-radius: 50px;
-    border: 2px solid #1c4583;
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
     cursor: pointer;
     text-decoration: none;
+    border: 2px solid #1c4583;
     transition: all .3s ease;
+    font-size: 15px;
 }
 
 .fa-arrow-left:hover{
-        background: transparent;
-        border: 2px solid #1c4583;
-        color: #1c4583;
-            transition: all .3s ease;
-
-    }
+    background: transparent;
+    border: 2px solid #1c4583;
+    transition: all .3s ease;
+    color: #1c4583;
+}
 
 /*buscador*/
 
@@ -198,17 +220,12 @@ display: none;
   font-size: 18px;
 }
 
-/*Menu de filtros*/
+/*boton filtrar*/
 
 .filtrar{
-    position: absolute;
     display: inline-flex;
     align-items: center;
-    justify-content: center;
-    background: transparent;
-    gap: 8px;
-    margin-left: 90%;
-    margin-top: -140px;
+    gap: 5px;
     font-size: 20px;
     padding: 10px 20px;
     border-radius: 10px;
@@ -644,29 +661,69 @@ hr{
     /*banner*/
 
     #banner .ban{
-        bottom: 23%;
-        font-size: 1.2rem;
-        left: 45%;
+        margin-bottom: -10px;
+        font-size: 1rem;
     }
 
     #banner h3{
         font-size: 2rem;
-        bottom: 45%;
-        left: 35%;
+        margin-bottom: 0px;
     }
+
     /*buscador*/
 
     #buscador button{
         right: 16%;
     }
 
+    /*division regresar y menu filtros*/
+
+    .division{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    margin-top: 30px;
+}
+
+    /*boton de regresar*/
+
+    .fa-arrow-left{
+    display: inline-flex;
+    background: #1c4583;
+    color: #ffff;
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #1c4583;
+    transition: all .3s ease;
+    font-size: 15px;
+}
+
+.fa-arrow-left:hover{
+    background: transparent;
+    border: 2px solid #1c4583;
+    transition: all .3s ease;
+    color: #1c4583;
+}
+
     /*boton de filtros*/
     .filtrar{
-        position: absolute;
-        margin-top: -11%;
-        margin-left: 85%;
-        font-size: 20px;
-    }
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #1c4583;
+    border: 2px solid #1c4583;
+    border: #1c4583;
+    color: #cfdbe2;
+    cursor: pointer;
+    transition: all .3s ease;
+}
 
     /*modal*/
 
@@ -798,26 +855,57 @@ hr{
         border: none;
         text-decoration: none;
     }
+    
+    /*division regresar y menu filtros*/
+
+    .division{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 25px;
+    margin-top: 30px;
+}
+
     /*boton de regresar*/
 
     .fa-arrow-left{
-        margin-top: 10%;
-        margin-bottom: -25%;
-        margin-left: 8%;
-        padding: 3%;
-    }
+    display: inline-flex;
+    background: #1c4583;
+    color: #ffff;
+    padding: 1rem;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid #1c4583;
+    transition: all .3s ease;
+    font-size: 15px;
+}
 
-    /*boton d filtros*/
+.fa-arrow-left:hover{
+    background: transparent;
+    border: 2px solid #1c4583;
+    transition: all .3s ease;
+    color: #1c4583;
+}
 
+    /*boton de filtros*/
     .filtrar{
-        position: absolute;
-        display: inline-block;
-        margin-top: -26%;
-        margin-left: 80%;
-        font-size: 20px;
-    }
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #1c4583;
+    border: 2px solid #1c4583;
+    border: #1c4583;
+    color: #cfdbe2;
+    cursor: pointer;
+    transition: all .3s ease;
+}
 
-    .filtrar .testo{
+.filtrar .testo{
         display: none;
     }
 
@@ -849,18 +937,15 @@ hr{
     }
 
     #banner .ban{
-        bottom: 18%;
-        font-size: 0.9rem;
-        left: 42%;
-        padding: 5px 10px;
+        margin-bottom: 0px;
+        font-size: 0.8rem;
+        padding: 10px;
     }
 
     #banner h3{
-        font-size: 1.5rem;
-        bottom: 40%;
-        left: 27%;
+        font-size: 1.3rem;
+        margin-bottom: -30px;
     }
-    
 
     /*modal*/
 
@@ -969,11 +1054,6 @@ hr{
         margin: 2.5% auto;
         margin-top: 5%;
         padding: 20px;
-    }
-
-    button, a{
-        min-width: 48px;
-        min-height: 48px;
     }
 
     
