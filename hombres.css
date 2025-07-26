@@ -157,7 +157,7 @@ display: none;
     justify-content: space-between;
     align-items: center;
     padding: 20px 25px;
-    margin-top: 60px;
+    margin-top: 40px;
 }
 
 /*boton d regresar*/
@@ -187,7 +187,7 @@ display: none;
 /*buscador*/
 
 #buscador{
-    margin-top: 5%;
+    margin-top: 0;
     position:relative;
     animation: slideInFromLeft 1s ease forwards;
     text-align: center;
@@ -247,18 +247,30 @@ display: none;
 /*eliminar filtros*/
 .filtros .limpiar{
     background: transparent;
-    border: none;
+    border: 1px solid #cfdbe2;
+    border-radius: 10px;
     color: #cfdbe2;
     margin: 15px 0;
     font-size: 1.5rem;
     padding: 10px;
     cursor: pointer;
+    transition: all .3s ease;
 }
 
 .filtros .limpiar:hover{
-    border: 2px solid #cfdbe2;
+    border: 1px solid #cfdbe2;
     border-radius: 10px;
+    transform: scale(1.05);
+    transition: all .3s ease;
 }
+
+.btnfiltross{
+    margin-top: 5%;
+    display: flex;
+    gap: 40px;
+}
+
+/*menu de filtros*/
 
 .filtros{
     position: fixed;
@@ -524,12 +536,19 @@ input#marca[type="checkbox"]:checked + label + .menver{
     background: #4d88df;
 }
 
+.preview .comtenido .detalles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .preview .comtenido .was{
+    margin-top: 8%;
     border-radius: 15px;
     border: none;
     padding: 5px 25px;
     background: #25D366;
-    margin-left: 30%;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -854,6 +873,45 @@ hr{
         text-decoration: none;
     }
 
+    /*menu de filtros*/
+
+        .filtros{
+        position: fixed;
+        top: 80px;
+        right: 0%;
+        background: #0f0f0f;
+        width: 100%;
+        padding: 20px;
+        z-index: 9999;
+        color: #cfdbe2;
+        height: 100%;
+        overflow-y: auto;
+        opacity: 0;
+        transform: translateX(100%);
+        pointer-events: none;
+        transition: all 0.3s ease;
+        background: rgba(15, 15, 15, 0.8);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 0 15px rgba(95, 154, 243, 0.3);
+    }
+    
+    .limpiar{
+        background: transparent;
+        border: 1px solid #cfdbe2;
+        border-radius: 10px;
+        color: #cfdbe2;
+        margin: 15px 0;
+        font-size: 1rem;
+        padding: 10px;
+        cursor: pointer;
+        transition: all .3s ease;
+    }
+
+    .btnfiltross{
+        display: flex;
+        justify-content: space-between;
+    }
+
     /*banner*/
 
     .photo{
@@ -882,7 +940,7 @@ hr{
     justify-content: space-between;
     align-items: center;
     padding: 20px 25px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
     /*boton de regresar*/
@@ -932,7 +990,7 @@ hr{
     /*buscador*/
 
     #buscador{
-        margin-top: 10%;
+        margin-top: 3%;
     }
 
     #buscador input{
