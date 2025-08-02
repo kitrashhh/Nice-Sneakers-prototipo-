@@ -31,6 +31,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore (app);
 
 
+
 // VARIABLES DEL FOM (ELEMENTOS HTML)
 //previewContainer: Contenedor del modal
 const previewContainer = document.querySelector(".preview");
@@ -44,8 +45,7 @@ const fondoBorroso = document.querySelector(".fondo-borroso");
 //funcion asincronica para traer los productos desde la coleccion de firebase
 //categoria: nombre de la categoria
 //contenedorId: ID del contenedor HTML donde se insertaran los productos
-//limite: cuantos productos mostrar como maximo
-async function cargarProductosCategoria(categoria, contenedorId, limite = 5) {
+async function cargarProductosCategoria(categoria, contenedorId) {
   
   //obtiene el contenedor HTML donde se mostraran los productos
   const contenedor = document.getElementById(contenedorId);
@@ -65,13 +65,8 @@ async function cargarProductosCategoria(categoria, contenedorId, limite = 5) {
   //esto es para q se borre todo en la categoria y evitar q los productos se dupliquen
   contenedor.innerHTML = '';
 
-  //variable contador para saber cuantos productos hemos añadido
-  let contador = 0;
-
   //para cada doc (producto) en los resultados y crea su tarjeta HTML
   querySnapshot.forEach((doc) => {
-    if (contador >= limite) return //solo muestra hasta el limite
-    contador++; //aumenta el contador
 
     //obtiene los datos del producto
     //producto: datos del doc (nombre, precio, img, etc.)
@@ -85,6 +80,7 @@ async function cargarProductosCategoria(categoria, contenedorId, limite = 5) {
       <p class="potaxie">${producto.nombre}</p>
       <p class="fife">$${producto.precio}</p>
     </div>
+
     `;
 
   });
@@ -98,6 +94,8 @@ async function cargarProductosCategoria(categoria, contenedorId, limite = 5) {
     });
   });
 }
+
+
 
 //funcion para abrir/actualizar el modal con los detalles del producto
 //productoId: ID del doc en FS
@@ -162,8 +160,11 @@ function cerrarModal() {
 document.addEventListener('DOMContentLoaded', () => {
 
   //carga las 3 categorias principales en sus contenedores
-  cargarProductosCategoria("Lo más vendido", "LoMasVendido", 5);
-  cargarProductosCategoria("Lo más nuevo", "LoMasNuevo", 5);
-  cargarProductosCategoria("Ofertas del día", "OfertasDelDia", 5);  
+  cargarProductosCategoria("Lo más vendido", "LoMasVendido");
+  cargarProductosCategoria("Lo más nuevo", "LoMasNuevo");
+  cargarProductosCategoria("Ofertas del día", "OfertasDelDia");
+  cargarProductosCategoria("Hombres", "Hombress");
+  cargarProductosCategoria("Mujeres", "Mujeress");
+  cargarProductosCategoria("Ninos", "Ninoss");  
 });
 

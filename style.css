@@ -295,7 +295,7 @@ display: none;
     top: 80px;
     right: 0%;
     background: #0f0f0f;
-    width: 450px;
+    width: 700px;
     padding: 20px;
     z-index: 9999;
     color: #cfdbe2;
@@ -331,7 +331,7 @@ display: none;
 }
 
 .filtros ul li ul{
-    margin-left: 10%;
+    margin-left: 5%;
     margin-right: 50%;
     margin-top: 5%;
 }
@@ -356,12 +356,18 @@ display: none;
     font-weight: 500;
 }
 
+.btnfiltross{
+    display: flex;
+    justify-content: space-between;
+}
+
 .menver{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
     list-style: none;
-    padding-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .menver li{
@@ -380,24 +386,54 @@ display: none;
   transition: all .3s ease;
 }
 
+/*LO MAS VENDIDO*/
+
 input#talla[type="checkbox"]:checked + label + .menver{
-    max-height: 500px;
+    max-height: 800px;
 }
 
 input#color[type="checkbox"]:checked + label + .menver{
-    max-height: 500px;
+    max-height: 800px;
 }
 
 input#marca[type="checkbox"]:checked + label + .menver{
-    max-height: 500px;
+    max-height: 800px;
+}
+
+/*LO MAS NUEVO*/
+
+input#talla-nuevo[type="checkbox"]:checked + label + .menver{
+    max-height: 800px;
+}
+
+input#color-nuevo[type="checkbox"]:checked + label + .menver{
+    max-height: 800px;
+}
+
+input#marca-nuevo[type="checkbox"]:checked + label + .menver{
+    max-height: 800px;
+}
+
+/*OFERTASD DEL DIA*/
+
+input#talla-ofertas[type="checkbox"]:checked + label + .menver{
+    max-height: 800px;
+}
+
+input#color-ofertas[type="checkbox"]:checked + label + .menver{
+    max-height: 800px;
+}
+
+input#marca-ofertas[type="checkbox"]:checked + label + .menver{
+    max-height: 800px;
 }
 
 /*seccion*/
 
-.ofertas{
+.categoria.principal{
     max-height: 450px;
     display: flex;
-    flex-wrap: nowrap;
+    gap: 120px;
     margin-top: 2.5%;
     margin-left: 1.3%;
     margin-right: 1%;
@@ -406,22 +442,19 @@ input#marca[type="checkbox"]:checked + label + .menver{
     box-shadow: 0px 3px 8px rgb(131, 116, 121);
     overflow-x: auto; 
     animation: slideInFromLeft 1s ease forwards;
-    gap: 20px;
+    padding: 40px;
 }
 
 .cont{
     cursor: pointer;
     width: 250px;
-    margin-left: 3.4%;
-    margin-right: 3.4%;
+    margin: 0;
     text-align: center;
-    margin-top: 4%;
-    margin-bottom: 4%;
-    bottom: 0;
     transition: transform 0.3s;
     padding: 25px;
     background: #ffff;
     border-radius: 10px;
+    flex-shrink: 0; /*evita que se achiquen en el scroll*/
 }
 
  .cont:hover{
@@ -483,6 +516,19 @@ input#marca[type="checkbox"]:checked + label + .menver{
     margin-bottom: 15px;
 }
 
+.marca{
+    font-weight: 600;
+    color: #222222;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.descripcion{
+    color: #222222;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
 .preview{
     position: fixed;
     top: 0;
@@ -494,7 +540,7 @@ input#marca[type="checkbox"]:checked + label + .menver{
     min-height: 100vh;
     backdrop-filter: blur(8px);
     background-color: rgba(0, 0, 0, 0.3); 
-    z-index: 999; 
+    z-index: 1000; 
 }
 
 .preview.activo {
@@ -514,14 +560,11 @@ input#marca[type="checkbox"]:checked + label + .menver{
     margin: 15px;
     width: 30%;
     border-radius: 10px;
+    z-index: 10000;
 }
 
 .preview .comtenido.activo {
     display: block;
-}
-
-.preview .comtenido.active{
-    display: inline-block;
 }
 
 .preview .comtenido img{
@@ -541,7 +584,7 @@ input#marca[type="checkbox"]:checked + label + .menver{
 }
 
 .preview .comtenido .size{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .preview .comtenido button{
@@ -591,22 +634,26 @@ input#marca[type="checkbox"]:checked + label + .menver{
 
  /*fondo borroso al abrir item*/
 
- /*.fondo-borroso {
+.fondo-borroso {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     backdrop-filter: blur(8px);
     background-color: rgba(0, 0, 0, 0.3); 
     z-index: 999; 
-    display: none;
-}*/
+}
+
+.oculto{
+    display: none
+}
 
 /*categorias generales*/
 
 .categorias{
-    margin-top: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .categorias h2{

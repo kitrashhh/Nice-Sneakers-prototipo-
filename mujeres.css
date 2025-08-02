@@ -276,7 +276,7 @@ display: none;
     top: 80px;
     right: 0%;
     background: #0f0f0f;
-    width: 450px;
+    width: 700px;
     padding: 20px;
     z-index: 9999;
     color: #cfdbe2;
@@ -312,7 +312,7 @@ display: none;
 }
 
 .filtros ul li ul{
-    margin-left: 10%;
+    margin-left: 5%;
     margin-right: 50%;
     margin-top: 5%;
 }
@@ -337,12 +337,19 @@ display: none;
     font-weight: 500;
 }
 
+    .btnfiltross{
+        display: flex;
+        justify-content: space-between;
+    }
+
 .menver{
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
     list-style: none;
     padding-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .menver li{
@@ -374,7 +381,7 @@ input#marca[type="checkbox"]:checked + label + .menver{
 
 /*categoria uwu*/
 
-.zap{
+.pluc{
     margin-top: 10%;
     width: 200px;
     height: 210px;
@@ -382,28 +389,29 @@ input#marca[type="checkbox"]:checked + label + .menver{
     transition: .3s;
 }
 
-#owo{
+.categoria{
     font-family: 'Montserrat';
-    display: block;
+    display: grid; /* activa en modo grid, rejilla flexible*/
+    grid-template-columns: repeat(4, 1fr); /*crea 4 columnas iguales, y 1 fr es una fraccion del espacio disponible*/
+    gap: 20px;
+    align-items: start;
+    justify-content: center;
     background: #f4f5f7;
     box-shadow: 0px 3px 8px rgb(131, 116, 121);
-    border-radius: 20px;
+    border-radius: 10px;
     width: 97%;
     box-sizing: border-box;
     margin: 2.5% auto;
-    padding: 20px;
+    margin-top: 3%;
+    padding: 50px;
     transition: .5 ease;
 }
 
 .cont{
     cursor: pointer;
     max-width: 250px;
-    margin-left: 3.4%;
-    margin-right: 3.4%;
+    margin: 0 auto;
     text-align: center;
-    margin-top: 4%;
-    margin-bottom: 4%;
-    bottom: 0;
     transition: transform 0.3s;
     padding: 25px;
     background: #ffff;
@@ -422,12 +430,12 @@ input#marca[type="checkbox"]:checked + label + .menver{
     justify-content: space-around;
 }
 
-.title{
+.potaxie{
   font-size: 15px;
   font-weight: 400;
 }
 
-.price{
+.fife{
     font-size: 18px;
     font-weight: 500;
     color: #47748d
@@ -520,7 +528,7 @@ input#marca[type="checkbox"]:checked + label + .menver{
 }
 
 .preview .comtenido .size{
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .preview .comtenido button{
@@ -741,6 +749,12 @@ hr{
     color: #cfdbe2;
     cursor: pointer;
     transition: all .3s ease;
+}
+
+/*categoria*/
+
+.categoria{
+    grid-template-columns: repeat(2, 1fr); /*crea 4 columnas iguales, y 1 fr es una fraccion del espacio disponible*/
 }
 
 
@@ -1105,12 +1119,10 @@ hr{
         margin-top: 15%;
     }
 
-    #owo{
-        width: 85%;
-        margin: 2.5% auto;
-        margin-top: 5%;
-        padding: 20px;
-    }
+    .categoria{
+    grid-template-columns: 1fr; /*crea 4 columnas iguales, y 1 fr es una fraccion del espacio disponible*/
+    padding: 30px;
+}
 
     
 }

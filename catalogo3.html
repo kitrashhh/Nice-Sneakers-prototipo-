@@ -7,6 +7,8 @@
     <script src="script.js" defer></script>
     <script src="https://kit.fontawesome.com/13cae7644c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="categoria1.css">
+    <script type="module" src="productosc1.js"></script>
+    <script type="module" src="jsfiltrosprods/filtrosofertasdeldia.js"></script>
     <link rel="stylesheet" href="loading.css">
     <title>Categoria 3</title>
 </head>
@@ -96,66 +98,9 @@
 
         <!--Catalogo-->
 
-    <section id="owo">
+    <section class="categoria" id="OfertasDelDia">
 
-        <div class="fila">
-            <div class="cont" data-name="p-1">
-
-                <img src="productos/un-zapato-de-la-zapatilla-de-deporte-blanco-aislado-en-blanco.jpg" class="zap">
-                <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
-                <p class="price">$000</p>
-
-            </div>
-
-            <div class="cont" data-name="p-2">
-
-                <img src="productos/p1.png" class="zap">
-                <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
-                <p class="price">$000</p>
-
-            </div>
-
-            <div class="cont" data-name="p-3">
-
-                <img src="productos/p3.png" class="zap">
-                <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
-                <p class="price">$000</p>
-
-            </div>
-
-            <div class="cont" data-name="p-4">
-
-                <img src="productos/p4.png" class="zap">
-                <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
-                <p class="price">$000</p>
-
-            </div>
-
-            <div class="cont" data-name="p-5">
-
-                <img src="productos/sneakers-5408667.png" class="zap">
-                <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
-                <p class="price">$000</p>
-
-            </div>
-
-            <div class="cont" data-name="p-6">
-
-                <img src="productos/sneakers-5408674.png" class="zap">
-                <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
-                <p class="price">$000</p>
-
-            </div>
-
-            <div class="cont" data-name="p-7">
-
-                <img src="https://images.unsplash.com/photo-1608667508764-33cf0726b13a?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="zap">
-                <h4 class="title">5 pasteles rellenos de fresa tamaño mediano</h4>
-                <p class="price">$000</p>
-
-            </div>
-            
-        </div>
+        
 
     </section>
 
@@ -183,23 +128,23 @@
                 <ul class="menver">
                     <li tabindex="0">
                         <input type="checkbox" id="taia1">
-                        <label for="taia1">21 cm</label>
+                        <label for="taia1">21</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="taia2">
-                        <label for="taia2">22 cm</label>
+                        <label for="taia2">22</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="taia3">
-                        <label for="taia3">23 cm</label>
+                        <label for="taia3">23</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="taia4">
-                        <label for="taia4">24 cm</label>
+                        <label for="taia4">24</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="taia5">
-                        <label for="taia5">25 cm</label>
+                        <label for="taia5">25</label>
                     </li>
                 </ul>
             </li>
@@ -247,7 +192,7 @@
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="marka4">
-                        <label for="marka4">Reebok</label>
+                        <label for="marka4">Rick Owens</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="marka5">
@@ -267,32 +212,25 @@
 
 <div class="preview">
 
-        <div class="comtenido" data-target="p-1">
+        <div class="comtenido">
             <div class="cerrar">
                 X
             </div>
-            <img src="https://images.unsplash.com/photo-1608667508764-33cf0726b13a?q=80&w=580&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="pluc">
-                <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
-                <p class="presio">$4500</p>
+            <img src="" class="pluc">
+                <p class="tula"></p>
+                <p class="marca"></p>
+                <p class="descripcion"></p>
+                <p class="presio"></p>
             <div class="detalles">
                     <div class="size">
-                        <label for="size">Tamaño</label>
-                        <select name="" id="">
-                            <option value="">21</option>
-                            <option value="">22</option>
-                            <option value="">23</option>
-                            <option value="">24</option>
+                        <label for="size">Talla</label>
+                        <select class="size" id="tallas-select">
                         </select>
                     </div>
 
                     <div class="colorr">
                         <label for="colorr">Color</label>
-                        <select name="" id="">
-                            <option value="">Negro</option>
-                            <option value="">Blanco</option>
-                            <option value="">Rojo</option>
-                            <option value="">Rosa</option>
-                            <option value="">Azul</option>
+                        <select class="colorr" id="colores-select">
                         </select>
                     </div>
 
@@ -301,348 +239,7 @@
             </div>
         </div>
 
-        <div class="comtenido" data-target="p-2">
-            <div class="cerrar">
-                X
-            </div>
-            <img src="productos/p1.png" class="pluc">
-                <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
-                <p class="presio">$4500</p>
-            <div class="detalles">
-                    <div class="size">
-                        <label for="size">Tamaño</label>
-                        <select name="" id="">
-                            <option value="">21</option>
-                            <option value="">22</option>
-                            <option value="">23</option>
-                            <option value="">24</option>
-                        </select>
-                    </div>
-
-                    <div class="colorr">
-                        <label for="colorr">Color</label>
-                        <select name="" id="">
-                            <option value="">Negro</option>
-                            <option value="">Blanco</option>
-                            <option value="">Rojo</option>
-                            <option value="">Rosa</option>
-                            <option value="">Azul</option>
-                        </select>
-                    </div>
-                    <button class="was"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></button>
-                </div>
-        </div>
-
-        <div class="comtenido" data-target="p-3">
-            <div class="cerrar">
-                X
-            </div>
-            <img src="productos/p3.png" class="pluc">
-                <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
-                <p class="presio">$4500</p>
-            <div class="detalles">
-                    <div class="size">
-                        <label for="size">Tamaño</label>
-                        <select name="" id="">
-                            <option value="">21</option>
-                            <option value="">22</option>
-                            <option value="">23</option>
-                            <option value="">24</option>
-                        </select>
-                    </div>
-                    <button class="was"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></button>
-                </div>
-        </div>
-
-        <div class="comtenido" data-target="p-4">
-            <div class="cerrar">
-                X
-            </div>
-            <img src="productos/p4.png" class="pluc">
-                <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
-                <p class="presio">$4500</p>
-            <div class="detalles">
-                    <div class="size">
-                        <label for="size">Tamaño</label>
-                        <select name="" id="">
-                            <option value="">21</option>
-                            <option value="">22</option>
-                            <option value="">23</option>
-                            <option value="">24</option>
-                        </select>
-                    </div>
-
-                    <div class="colorr">
-                        <label for="colorr">Color</label>
-                        <select name="" id="">
-                            <option value="">Negro</option>
-                            <option value="">Blanco</option>
-                            <option value="">Rojo</option>
-                            <option value="">Rosa</option>
-                            <option value="">Azul</option>
-                        </select>
-                    </div>
-                    <button class="was"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></button>
-                </div>
-        </div>
-
-        <div class="comtenido" data-target="p-5">
-            <div class="cerrar">
-                X
-            </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
-                <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
-                <p class="presio">$4500</p>
-            <div class="detalles">
-                    <div class="size">
-                        <label for="size">Tamaño</label>
-                        <select name="" id="">
-                            <option value="">21</option>
-                            <option value="">22</option>
-                            <option value="">23</option>
-                            <option value="">24</option>
-                        </select>
-                    </div>
-
-                    <div class="colorr">
-                        <label for="colorr">Color</label>
-                        <select name="" id="">
-                            <option value="">Negro</option>
-                            <option value="">Blanco</option>
-                            <option value="">Rojo</option>
-                            <option value="">Rosa</option>
-                            <option value="">Azul</option>
-                        </select>
-                    </div>
-                    <button class="was"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></button>
-                </div>
-        </div>
-
-        <div class="comtenido" data-target="p-6">
-            <div class="cerrar">
-                X
-            </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
-                <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
-                <p class="presio">$4500</p>
-            <div class="detalles">
-                    <div class="size">
-                        <label for="size">Tamaño</label>
-                        <select name="" id="">
-                            <option value="">21</option>
-                            <option value="">22</option>
-                            <option value="">23</option>
-                            <option value="">24</option>
-                        </select>
-                    </div>
-
-                    <div class="colorr">
-                        <label for="colorr">Color</label>
-                        <select name="" id="">
-                            <option value="">Negro</option>
-                            <option value="">Blanco</option>
-                            <option value="">Rojo</option>
-                            <option value="">Rosa</option>
-                            <option value="">Azul</option>
-                        </select>
-                    </div>
-                    <button class="was"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></button>
-                </div>
-        </div>
-
-        <div class="comtenido" data-target="p-7">
-            <div class="cerrar">
-                X
-            </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
-                <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
-                <p class="presio">$4500</p>
-            <div class="detalles">
-                    <div class="size">
-                        <label for="size">Tamaño</label>
-                        <select name="" id="">
-                            <option value="">21</option>
-                            <option value="">22</option>
-                            <option value="">23</option>
-                            <option value="">24</option>
-                        </select>
-                    </div>
-
-                    <div class="colorr">
-                        <label for="colorr">Color</label>
-                        <select name="" id="">
-                            <option value="">Negro</option>
-                            <option value="">Blanco</option>
-                            <option value="">Rojo</option>
-                            <option value="">Rosa</option>
-                            <option value="">Azul</option>
-                        </select>
-                    </div>
-                    <button class="was"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></button>
-                </div>
-        </div>
-
-        <div class="comtenido" data-target="p-8">
-            <div class="cerrar">
-                X
-            </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
-                <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
-                <p class="presio">$4500</p>
-            <div class="detalles">
-                    <div class="size">
-                        <label for="size">Tamaño</label>
-                        <select name="" id="">
-                            <option value="">21</option>
-                            <option value="">22</option>
-                            <option value="">23</option>
-                            <option value="">24</option>
-                        </select>
-                    </div>
-
-                    <div class="colorr">
-                        <label for="colorr">Color</label>
-                        <select name="" id="">
-                            <option value="">Negro</option>
-                            <option value="">Blanco</option>
-                            <option value="">Rojo</option>
-                            <option value="">Rosa</option>
-                            <option value="">Azul</option>
-                        </select>
-                    </div>
-                    <button class="was"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></button>
-                </div>
-        </div>
-
-        <div class="comtenido" data-target="p-9">
-            <div class="cerrar">
-                X
-            </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
-                <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
-                <p class="presio">$4500</p>
-            <div class="detalles">
-                    <div class="size">
-                        <label for="size">Tamaño</label>
-                        <select name="" id="">
-                            <option value="">21</option>
-                            <option value="">22</option>
-                            <option value="">23</option>
-                            <option value="">24</option>
-                        </select>
-                    </div>
-
-                    <div class="colorr">
-                        <label for="colorr">Color</label>
-                        <select name="" id="">
-                            <option value="">Negro</option>
-                            <option value="">Blanco</option>
-                            <option value="">Rojo</option>
-                            <option value="">Rosa</option>
-                            <option value="">Azul</option>
-                        </select>
-                    </div>
-                    <button class="was"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></button>
-                </div>
-        </div>
-
-        <div class="comtenido" data-target="p-10">
-            <div class="cerrar">
-                X
-            </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
-                <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
-                <p class="presio">$4500</p>
-            <div class="detalles">
-                    <div class="size">
-                        <label for="size">Tamaño</label>
-                        <select name="" id="">
-                            <option value="">21</option>
-                            <option value="">22</option>
-                            <option value="">23</option>
-                            <option value="">24</option>
-                        </select>
-                    </div>
-
-                    <div class="colorr">
-                        <label for="colorr">Color</label>
-                        <select name="" id="">
-                            <option value="">Negro</option>
-                            <option value="">Blanco</option>
-                            <option value="">Rojo</option>
-                            <option value="">Rosa</option>
-                            <option value="">Azul</option>
-                        </select>
-                    </div>
-                    <button class="was"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></button>
-                </div>
-        </div>
-
-        <div class="comtenido" data-target="p-11">
-            <div class="cerrar">
-                X
-            </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
-                <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
-                <p class="presio">$4500</p>
-            <div class="detalles">
-                    <div class="size">
-                        <label for="size">Tamaño</label>
-                        <select name="" id="">
-                            <option value="">21</option>
-                            <option value="">22</option>
-                            <option value="">23</option>
-                            <option value="">24</option>
-                        </select>
-                    </div>
-
-                    <div class="colorr">
-                        <label for="colorr">Color</label>
-                        <select name="" id="">
-                            <option value="">Negro</option>
-                            <option value="">Blanco</option>
-                            <option value="">Rojo</option>
-                            <option value="">Rosa</option>
-                            <option value="">Azul</option>
-                        </select>
-                    </div>
-                    <button class="was"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></button>
-                </div>
-        </div>
-
-        <div class="comtenido" data-target="p-12">
-            <div class="cerrar">
-                X
-            </div>
-            <img src="https://aranzazu.com/wp-content/uploads/2022/08/Categoria-Pasteles-compress.webp" class="pluc">
-                <p class="tula">5 pasteles rellenos de fresa tamaño mediano</p>
-                <p class="presio">$4500</p>
-            <div class="detalles">
-                    <div class="size">
-                        <label for="size">Tamaño</label>
-                        <select name="" id="">
-                            <option value="">21</option>
-                            <option value="">22</option>
-                            <option value="">23</option>
-                            <option value="">24</option>
-                        </select>
-                    </div>
-
-                    <div class="colorr">
-                        <label for="colorr">Color</label>
-                        <select name="" id="">
-                            <option value="">Negro</option>
-                            <option value="">Blanco</option>
-                            <option value="">Rojo</option>
-                            <option value="">Rosa</option>
-                            <option value="">Azul</option>
-                        </select>
-                    </div>
-                    <button class="was"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></button>
-                </div>
-        </div>
-
-    </div>
+</div>
 
 
         <footer>
