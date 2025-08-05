@@ -366,16 +366,46 @@ display: none;
 
 }
 
+/*LO MAS VENDIDO*/
+
 input#talla[type="checkbox"]:checked + label + .menver{
-    max-height: 500px;
+    max-height: 800px;
 }
 
 input#color[type="checkbox"]:checked + label + .menver{
-    max-height: 500px;
+    max-height: 800px;
 }
 
 input#marca[type="checkbox"]:checked + label + .menver{
-    max-height: 500px;
+    max-height: 800px;
+}
+
+/*LO MAS NUEVO*/
+
+input#talla-nuevo[type="checkbox"]:checked + label + .menver{
+    max-height: 800px;
+}
+
+input#color-nuevo[type="checkbox"]:checked + label + .menver{
+    max-height: 800px;
+}
+
+input#marca-nuevo[type="checkbox"]:checked + label + .menver{
+    max-height: 800px;
+}
+
+/*OFERTASD DEL DIA*/
+
+input#talla-ofertas[type="checkbox"]:checked + label + .menver{
+    max-height: 800px;
+}
+
+input#color-ofertas[type="checkbox"]:checked + label + .menver{
+    max-height: 800px;
+}
+
+input#marca-ofertas[type="checkbox"]:checked + label + .menver{
+    max-height: 800px;
 }
 
 
@@ -436,16 +466,6 @@ input#marca[type="checkbox"]:checked + label + .menver{
     color: #47748d
 }
 
-/*
-
-  <div class="cont" data-id="${doc.id}">
-      <img src="${producto.imagen}" class="pluc">
-      <p class="potaxie">${producto.nombre}</p>
-      <p class="fife">$${producto.precio}</p>
-    </div>
-
-
-*/
 
 /*del item seleccionado*/
 

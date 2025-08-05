@@ -62,9 +62,14 @@ function ObtenerCheks(ids){
 document.getElementById("aplicarfiltros-mujeres").addEventListener("click", async () => {
   
   //leer los filtros desde los checkboxes
-  const tallas = ObtenerCheks(["taia1", "taia2", "taia3", "taia4", "taia5"]).map(t => parseInt(t)); //hace cada string en numero
-  const colores = ObtenerCheks(["kolor1", "kolor2", "kolor3", "kolor4", "kolor5"]);
-  const marca = ObtenerCheks(["marka1", "marka2", "marka3", "marka4", "marka5"]);
+  const tallas = ObtenerCheks(["taia1", "taia2", "taia3", "taia4", "taia5", "taia6", "taia7", "taia8", "taia9", "taia10", "taia11", 
+    "taia12", "taia13", "taia14", "taia15", "taia16", "taia17", "taia18", "taia19"
+  ]).map(t => parseInt(t)); //hace cada string en numero
+  const colores = ObtenerCheks(["kolor1", "kolor2", "kolor3", "kolor4", "kolor5", "kolor6", "kolor7", "kolor8", "kolor9", "kolor10", "kolor11", 
+    "kolor12", "kolor13", "kolor14", "kolor15", "kolor16", "kolor17", "kolor18", "kolor19", "kolor20", "kolor21", "kolor22", "kolor23", "kolor24", "kolor25", 
+    "kolor26", "kolor27", "kolor28", "kolor29", "kolor30", "kolor31", "kolor32",
+  ]);
+  const marca = ObtenerCheks(["marka1", "marka2", "marka3", "marka4", "marka5", "marka6", "marka7", "marka8", "marka9", "marka10",]);
 
   //aplicar la funcion principal para filtrar productos
   await filtrarProds(tallas, colores, marca);
@@ -87,7 +92,9 @@ async function filtrarProds(tallas, colores, marca) {
     const data = doc.data(); //obtiene los datos del producto
 
     //verifica si la talla seleccionada coincide 
-    const tallaCoincidir = tallas.length === 0 || tallas.some(t => data.tallas.includes(t));
+    const tallaCoincidir = tallas.length === 0 || (
+      Array.isArray(data.tallas) && tallas.some(t => data.tallas.includes(Number(t)))
+    );
 
     //verifica si la talla seleccionada coincide 
     const colorCoincidir = colores.length === 0 || colores.some(c => data.colores.includes(c));

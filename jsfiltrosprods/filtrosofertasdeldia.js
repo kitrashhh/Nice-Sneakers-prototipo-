@@ -62,9 +62,15 @@ function ObtenerCheks(ids){
 document.getElementById("aplicarfiltros-ofertas").addEventListener("click", async () => {
   
   //leer los filtros desde los checkboxes
-  const tallas = ObtenerCheks(["taia1-ofertas", "taia2-ofertas", "taia3-ofertas", "taia4-ofertas", "taia5-ofertas"]).map(t => parseInt(t)); //hace cada string en numero
-  const colores = ObtenerCheks(["kolor1-ofertas", "kolor2-ofertas", "kolor3-ofertas", "kolor4-ofertas", "kolor5-ofertas"]);
-  const marca = ObtenerCheks(["marka1-ofertas", "marka2-ofertas", "marka3-ofertas", "marka4-ofertas", "marka5-ofertas"]);
+  const tallas = ObtenerCheks(["taia1-ofertas", "taia2-ofertas", "taia3-ofertas", "taia4-ofertas", "taia5-ofertas", "taia6-ofertas", "taia7-ofertas", "taia8-ofertas", "taia9-ofertas", "taia10-ofertas",
+     "taia11-ofertas", "taia12-ofertas", "taia13-ofertas", "taia14-ofertas", "taia15-ofertas", "taia16-ofertas", "taia17-ofertas", "taia18-ofertas", "taia19-ofertas"
+  ]).map(t => parseInt(t)); //hace cada string en numero
+  const colores = ObtenerCheks(["kolor1-ofertas", "kolor2-ofertas", "kolor3-ofertas", "kolor4-ofertas", "kolor5-ofertas", "kolor6-ofertas", "kolor7-ofertas", "kolor8-ofertas", "kolor9-ofertas", "kolor10-ofertas", 
+    "kolor11-ofertas", "kolor12-ofertas", "kolor13-ofertas", "kolor14-ofertas", "kolor15-ofertas", "kolor16-ofertas", "kolor17-ofertas", "kolor18-ofertas", "kolor19-ofertas", "kolor20-ofertas", 
+    "kolor21-ofertas", "kolor22-ofertas", "kolor23-ofertas", "kolor24-ofertas", "kolor25-ofertas", "kolor26-ofertas", "kolor27-ofertas", "kolor28-ofertas", "kolor29-ofertas", "kolor30-ofertas", 
+    "kolor31-ofertas", "kolor32-ofertas",
+  ]);
+  const marca = ObtenerCheks(["marka1-ofertas", "marka2-ofertas", "marka3-ofertas", "marka4-ofertas", "marka5-ofertas", "marka6-ofertas", "marka7-ofertas", "marka8-ofertas", "marka9-ofertas", "marka10-ofertas",]);
 
   //aplicar la funcion principal para filtrar productos
   await filtrarProds(tallas, colores, marca);
@@ -87,8 +93,15 @@ async function filtrarProds(tallas, colores, marca) {
     const data = doc.data(); //obtiene los datos del producto
 
     //verifica si la talla seleccionada coincide 
-    const tallaCoincidir = tallas.length === 0 || tallas.some(t => data.tallas.includes(t));
-
+    const tallaCoincidir = tallas.length === 0 || (
+      
+      //verifica que data.tallas exista y sea un array antes de usar includes()
+      Array.isArray(data.tallas) 
+      
+      //recorre las tallas seleccionadas en el filtro (t) y verifica si aguna esta en data.tallas del producto
+      && tallas.some(t => data.tallas.includes(Number(t)))
+    );
+    
     //verifica si la talla seleccionada coincide 
     const colorCoincidir = colores.length === 0 || colores.some(c => data.colores.includes(c));
 

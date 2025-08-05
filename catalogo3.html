@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="categoria1.css">
     <script type="module" src="productosc1.js"></script>
     <script type="module" src="jsfiltrosprods/filtrosofertasdeldia.js"></script>
+    <script type="module" src="buscador.js" defer></script>
     <link rel="stylesheet" href="loading.css">
-    <title>Categoria 3</title>
+    <title>Ofertas del dia</title>
 </head>
 <body>
 
@@ -80,9 +81,9 @@
 
         <!--menu de filtros-->
 
-        <button class="filtrar">
-                <i class="fa-solid fa-filter"></i>
-                <span class="testo">Filtrar</span>
+        <button class="filtrar" data-target="menufiltros-ofertas">
+            <i class="fa-solid fa-filter"></i>
+            <span class="testo">Filtrar</span>
         </button>
 
     </div>
@@ -108,96 +109,280 @@
 
          <!--Menu de filtros-->
 
-    <div class="filtros" id="menufiltros">
+    <div class="filtros" id="menufiltros-ofertas">
 
-        <span class="cerrar" id="cerrarfiltro">X</span>
+        <span class="cerrar" id="cerrarfiltro-ofertas">X</span>
 
         <div class="btnfiltross">
 
-            <button type="button" id="limpiarfiltros" class="limpiar">Limpiar filtros</button>
+            <button type="button" id="limpiarfiltros-ofertas" class="limpiar">Limpiar filtros</button>
 
-            <button type="button" id="aplicarfiltros" class="limpiar">Aplicar filtros</button>
+            <button type="button" id="aplicarfiltros-ofertas" class="limpiar">Aplicar filtros</button>
 
         </div>
 
         <ul class="menhor">
 
             <li>
-                <input type="checkbox" id="talla" hidden>
-                <label for="talla" class="subt"><i class="fa-solid fa-ruler"></i>Talla</label>
+                <input type="checkbox" id="talla-ofertas" hidden>
+                <label for="talla-ofertas" class="subt"><i class="fa-solid fa-ruler"></i>Talla</label>
                 <ul class="menver">
                     <li tabindex="0">
-                        <input type="checkbox" id="taia1">
-                        <label for="taia1">21</label>
+                        <input type="checkbox" id="taia1-ofertas">
+                        <label for="taia1-ofertas">16</label>
                     </li>
                     <li tabindex="0">
-                        <input type="checkbox" id="taia2">
-                        <label for="taia2">22</label>
+                        <input type="checkbox" id="taia2-ofertas">
+                        <label for="taia2-ofertas">17</label>
                     </li>
                     <li tabindex="0">
-                        <input type="checkbox" id="taia3">
-                        <label for="taia3">23</label>
+                        <input type="checkbox" id="taia3-ofertas">
+                        <label for="taia3-ofertas">18</label>
                     </li>
                     <li tabindex="0">
-                        <input type="checkbox" id="taia4">
-                        <label for="taia4">24</label>
+                        <input type="checkbox" id="taia4-ofertas">
+                        <label for="taia4-ofertas">19</label>
                     </li>
                     <li tabindex="0">
-                        <input type="checkbox" id="taia5">
-                        <label for="taia5">25</label>
+                        <input type="checkbox" id="taia5-ofertas">
+                        <label for="taia5-ofertas">20</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia6-ofertas">
+                        <label for="taia6-ofertas">21</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia7-ofertas">
+                        <label for="taia7-ofertas">22</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia8-ofertas">
+                        <label for="taia8-ofertas">23</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia9-ofertas">
+                        <label for="taia9-ofertas">24</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia10-ofertas">
+                        <label for="taia10-ofertas">25</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia11-ofertas">
+                        <label for="taia11-ofertas">26</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia12-ofertas">
+                        <label for="taia12-ofertas">27</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia13-ofertas">
+                        <label for="taia13-ofertas">28</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia14-ofertas">
+                        <label for="taia14-ofertas">29</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia15-ofertas">
+                        <label for="taia15-ofertas">30</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia16-ofertas">
+                        <label for="taia16-ofertas">31</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia17-ofertas">
+                        <label for="taia17-ofertas">32</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia18-ofertas">
+                        <label for="taia18-ofertas">33</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="taia19-ofertas">
+                        <label for="taia19-ofertas">34</label>
                     </li>
                 </ul>
             </li>
             <li>
-                <input type="checkbox" id="color" hidden>
-                <label for="color" class="subt"><i class="fa-solid fa-palette"></i>Color</label>
+                <input type="checkbox" id="color-ofertas" hidden>
+                <label for="color-ofertas" class="subt"><i class="fa-solid fa-palette"></i>Color</label>
                 <ul class="menver">
                     <li tabindex="0">
-                        <input type="checkbox" id="kolor1">
-                        <label for="kolor1">Negro</label>
+                        <input type="checkbox" id="kolor1-ofertas">
+                        <label for="kolor1-ofertas">Negro</label>
                     </li>
                     <li tabindex="0">
-                        <input type="checkbox" id="kolor2">
-                        <label for="kolor2">Blanco</label>
+                        <input type="checkbox" id="kolor2-ofertas">
+                        <label for="kolor2-ofertas">Blanco</label>
                     </li>
                     <li tabindex="0">
-                        <input type="checkbox" id="kolor3">
-                        <label for="kolor3">Rojo</label>
+                        <input type="checkbox" id="kolor3-ofertas">
+                        <label for="kolor3-ofertas">Rojo</label>
                     </li>
                     <li tabindex="0">
-                        <input type="checkbox" id="kolor4">
-                        <label for="kolor4">Azul</label>
+                        <input type="checkbox" id="kolor4-ofertas">
+                        <label for="kolor4-ofertas">Azul</label>
                     </li>
                     <li tabindex="0">
-                        <input type="checkbox" id="kolor5">
-                        <label for="kolor5">Rosa</label>
+                        <input type="checkbox" id="kolor5-ofertas">
+                        <label for="kolor5-ofertas">Rosa</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor6-ofertas">
+                        <label for="kolor6-ofertas">Negro y blanco</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor7-ofertas">
+                        <label for="kolor7-ofertas">Blanco y negro</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor8-ofertas">
+                        <label for="kolor8-ofertas">Vino</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor9-ofertas">
+                        <label for="kolor9-ofertas">Azul celeste</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor10-ofertas">
+                        <label for="kolor10-ofertas">Rosa pastel</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor11-ofertas">
+                        <label for="kolor11-ofertas">Azul pastel</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor12-ofertas">
+                        <label for="kolor12-ofertas">Azul rey</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor13-ofertas">
+                        <label for="kolor13-ofertas">Verde</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor14-ofertas">
+                        <label for="kolor14-ofertas">Durazno</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor15-ofertas">
+                        <label for="kolor15-ofertas">Dorado</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor16-ofertas">
+                        <label for="kolor16-ofertas">Blanco y azul</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor17-ofertas">
+                        <label for="kolor17-ofertas">Naranja rojizo y negro</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor18-ofertas">
+                        <label for="kolor18-ofertas">Verde menta</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor19-ofertas">
+                        <label for="kolor19-ofertas">Naranja durazno</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor20-ofertas">
+                        <label for="kolor20-ofertas">Rojo y negro</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor21-ofertas">
+                        <label for="kolor21-ofertas">Rosa claro</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor22-ofertas">
+                        <label for="kolor22-ofertas">Blanco con azul celeste</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor23-ofertas">
+                        <label for="kolor23-ofertas">Vino y negro</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor24-ofertas">
+                        <label for="kolor24-ofertas">Gris y blanco</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor25-ofertas">
+                        <label for="kolor25-ofertas">Blanco y naranja</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor26-ofertas">
+                        <label for="kolor26-ofertas">Blanco y amarillo</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor27-ofertas">
+                        <label for="kolor27-ofertas">Gris y blanco</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor28-ofertas">
+                        <label for="kolor28-ofertas">Negro y azul</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor29-ofertas">
+                        <label for="kolor29-ofertas">Azul pantano</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor30-ofertas">
+                        <label for="kolor30-ofertas">Negro y naranja</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor31-ofertas">
+                        <label for="kolor31-ofertas">Azul y naranja</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="kolor32-ofertas">
+                        <label for="kolor32-ofertas">Azul y blanco</label>
                     </li>
                 </ul>
             </li>
             <li>
-                <input type="checkbox" id="marca" hidden>
-                <label for="marca" class="subt"><i class="fa-solid fa-tags"></i>Marca</label>
+                <input type="checkbox" id="marca-ofertas" hidden>
+                <label for="marca-ofertas" class="subt"><i class="fa-solid fa-tags"></i>Marca</label>
                 <ul class="menver">
                     <li tabindex="0">
-                        <input type="checkbox" id="marka1">
-                        <label for="marka1">Nike</label>
+                        <input type="checkbox" id="marka1-ofertas">
+                        <label for="marka1-ofertas">Nike</label>
                     </li>
                     <li tabindex="0">
-                        <input type="checkbox" id="marka2">
-                        <label for="marka2">Puma</label>
+                        <input type="checkbox" id="marka2-ofertas">
+                        <label for="marka2-ofertas">Puma</label>
                     </li>
                     <li tabindex="0">
-                        <input type="checkbox" id="marka3">
-                        <label for="marka3">Converse</label>
+                        <input type="checkbox" id="marka3-ofertas">
+                        <label for="marka3-ofertas">Converse</label>
                     </li>
                     <li tabindex="0">
-                        <input type="checkbox" id="marka4">
-                        <label for="marka4">Rick Owens</label>
+                        <input type="checkbox" id="marka4-ofertas">
+                        <label for="marka4-ofertas">Rick Owens</label>
                     </li>
                     <li tabindex="0">
-                        <input type="checkbox" id="marka5">
-                        <label for="marka5">Adidas</label>
+                        <input type="checkbox" id="marka5-ofertas">
+                        <label for="marka5-ofertas">MOJANG</label>
                     </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="marka6-ofertas">
+                        <label for="marka6-ofertas">Charly</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="marka7-ofertas">
+                        <label for="marka7-ofertas">Gucci</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="marka8-ofertas">
+                        <label for="marka8-ofertas">Oliver</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="marka9-ofertas">
+                        <label for="marka9-ofertas">New Balance</label>
+                    </li>
+                    <li tabindex="0">
+                        <input type="checkbox" id="marka10-ofertas">
+                        <label for="marka10-ofertas">Vans</label>
+
                 </ul>
             </li>
 
@@ -286,36 +471,35 @@
         <br>
     </footer>
 
+    <!--El script para abrir el menu de filtros adecuado-->
     <script>
 
-        const btnfiltrar = document.querySelectorAll(".filtrar");
-        const menu = document.getElementById("menufiltros");
-        const btncerrar = document.getElementById("cerrarfiltro");
+        document.addEventListener("DOMContentLoaded", () => {
 
-        btnfiltrar.forEach((boton) =>{
-                boton.addEventListener("click", () =>{
-                menu.classList.add("visible");
+            //abrir el menu correcto
+        document.querySelectorAll(".filtrar").forEach(boton => {
+            boton.addEventListener("click", () => {
+                document.querySelectorAll(".filtros").forEach(menu =>{
+                    menu.classList.remove("visible");
+                });
+
+                const targetId = boton.getAttribute("data-target");
+                const menu = document.getElementById(targetId);
+                if(menu){
+                    menu.classList.add("visible");
+                }
             });
-        })
-        
-
-        btncerrar.addEventListener("click", () =>{
-            menu.classList.remove("visible");
-        });
-        
-    </script>
-
-    <script>
-
-        /*borrar filtros*/
-
-        document.getElementById("limpiarfiltros").addEventListener("click", () => {
-        const checkboxes = document.querySelectorAll('.filtros input[type="checkbox"]:not([hidden])');
-        checkboxes.forEach(checkbox => {
-            checkbox.checked = false;
         });
 
-});
+        //cerrar el menu con la x
+        document.querySelectorAll(".cerrar").forEach(cerrarBtn =>{
+            cerrarBtn.addEventListener("click", () =>{
+                cerrarBtn.closest(".filtros").classList.remove("visible");
+            });
+        });
+
+        });
+        
 
     </script>
 
