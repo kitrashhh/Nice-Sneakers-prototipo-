@@ -11,6 +11,7 @@
     <script type="module" src="jsfiltrosprods/filtroslomasnuevo.js"></script>
     <script type="module" src="jsfiltrosprods/filtrosofertasdeldia.js"></script>
     <script type="module" src="buscador.js" defer></script>
+    <script type="module" src="wasa.js"></script>
     <script src="https://kit.fontawesome.com/13cae7644c.js" crossorigin="anonymous"></script>
     <title>Nice Sneakers</title>
 </head>
@@ -79,7 +80,7 @@
         <img src="grailify-8GuJ3GzA3nQ-unsplash.jpg" class="photo">
         <div class="banner-cont">
        <h3>Sneakers que hablan por ti</h3>
-       <button class="ban">Ver ahora</button>
+       <button class="ban" onclick="document.querySelector('#buscador').scrollIntoView({behavior: 'smooth'})">Ver ahora</button>
        </div>
     </div>    
     </section>
@@ -1070,7 +1071,7 @@ ofertas                </ul>
                         </select>
                     </div>
 
-                    <button class="was"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></button>
+                    <a class="was" href="https://wa.me/5218994843635?text=MENSAJE" target="_blank"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></a>
 
             </div>
         </div>

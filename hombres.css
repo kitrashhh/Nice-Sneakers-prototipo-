@@ -532,7 +532,8 @@ input#marca[type="checkbox"]:checked + label + .menver{
     margin-bottom: 10px;
 }
 
-.preview .comtenido button{
+.preview .comtenido a{
+    text-decoration: none;
     border-radius: 15px;
     border: none;
     padding: 15px;

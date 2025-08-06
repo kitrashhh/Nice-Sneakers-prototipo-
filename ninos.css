@@ -532,7 +532,7 @@ input#marca[type="checkbox"]:checked + label + .menver{
     margin-bottom: 10px;
 }
 
-.preview .comtenido button{
+.preview .comtenido a{
     border-radius: 15px;
     border: none;
     padding: 15px;
@@ -540,9 +540,6 @@ input#marca[type="checkbox"]:checked + label + .menver{
     cursor: pointer;
 }
 
-.preview .comtenido button:hover{
-    background: #4d88df;
-}
 
 .preview .comtenido .detalles{
     display: flex;
