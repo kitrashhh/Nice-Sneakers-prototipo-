@@ -43,7 +43,7 @@ async function generarWasa() {
   const producto = doc.data();
 
   //mensaje personalizado
-  const mensaje = `Hola, me interesan estos tenis: \n *${producto.nombre}* \n Modelo: ${producto.modelo} \n Precio: $ ${producto.precio} \n Imagen: ${producto.imagen}`;
+  const mensaje = `Hola, me interesan estos tenis: \n *${producto.nombre}* \n Marca: ${producto.marca} \n Precio: $ ${producto.precio} \n Imagen: ${producto.imagen}`;
 
   //codifica el mensaje para que se pueda enviar por URL
   //encodeURIComponent convierte caracteres especiales en formato seguro para URLs
