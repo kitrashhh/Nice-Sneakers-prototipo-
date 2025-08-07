@@ -19,24 +19,6 @@
         <span>Cargando...</span>
     </div>
 
-    <!--js para que el loading desaparezca-->
-    <script>
-        if(sessionStorage.getItem('paginaYaCargada') !== 'true') {
-            document.querySelector('.loading').classList.remove('hide');
-            window.addEventListener('load', function() {
-                setTimeout(function(){
-                    document.querySelector('.loading').classList.add('hide');
-                    sessionStorage.setItem('paginaYaCargada', 'true');
-                }, timeout = 1500);
-            });
-        } else {
-            document.querySelector('.loading').classList.add('hide');
-        }
-
-        window.addEventListener('beforeunload', function() {
-            sessionStorage.removeItem('paginaYaCargada');
-        });
-    </script>
 
     <!--menu-->
 

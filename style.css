@@ -128,7 +128,7 @@ display: none;
     box-sizing: border-box;
 }
 
-#banner h3{
+#banner h1{
     z-index: 2;
     margin-bottom: 20px;
     font-size: 2.5rem;
@@ -484,24 +484,6 @@ input#marca-ofertas[type="checkbox"]:checked + label + .menver{
  }
 
  /* modal del item seleccionado*/
-
- /*.seleccion{
-    z-index: 1000;
-    background: #cfdbe2;
-    transition: .5s ease;
-    opacity: 1;
-    width: 30%;
-    height: 93%;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-shadow: 0px 3px 8px rgb(131, 116, 121);
-    overflow: hidden;;
- }*/
 
 .presio{
     font-size: 18px;

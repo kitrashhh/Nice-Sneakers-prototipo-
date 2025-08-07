@@ -77,10 +77,10 @@
     <!--Banner-->
 
     <section id="banner">
-        <img src="grailify-8GuJ3GzA3nQ-unsplash.jpg" class="photo">
+        <img src="grailify-8GuJ3GzA3nQ-unsplash.jpg" class="photo" alt="Imagen del banner">
         <div class="banner-cont">
-       <h3>Sneakers que hablan por ti</h3>
-       <button class="ban" onclick="document.querySelector('#buscador').scrollIntoView({behavior: 'smooth'})">Ver ahora</button>
+       <h1>Sneakers que hablan por ti</h1>
+       <button class="ban" onclick="document.querySelector('#buscador').scrollIntoView({behavior: 'smooth'})" aria-label="Ver ahora">Ver ahora</button>
        </div>
     </div>    
     </section>
@@ -99,13 +99,13 @@
     <div id="vermas">
 
         <!--Boton para filtrar los productos-->
-        <button class="filtrar" data-target="menufiltros">
+        <button class="filtrar" data-target="menufiltros" aria-label="Filtrar">
             <i class="fa-solid fa-filter"></i>
             <span class="testo">Filtrar</span>
         </button>
         
         <h3 class="ver">Lo más vendido</h3>
-        <button onclick="location.href='categoria1.html'" class="mas">Ver más</button>
+        <button onclick="location.href='categoria1.html'" class="mas" aria-label="Ver más">Ver más</button>
     </div>
 
     <!--Catalogo-->
@@ -118,13 +118,13 @@
 
     <div id="vermas">
 
-        <button class="filtrar" data-target="menufiltros-nuevo">
+        <button class="filtrar" data-target="menufiltros-nuevo" aria-label="Filtrar">
             <i class="fa-solid fa-filter"></i>
             <span class="testo">Filtrar</span>
         </button>
 
         <h3 class="ver">Lo más nuevo</h3>
-        <button onclick="location.href='catalogo2.html'" class="mas">Ver más</button>
+        <button onclick="location.href='catalogo2.html'" class="mas" aria-label="Ver más">Ver más</button>
     </div>
 
     <section class="categoria principal" id="LoMasNuevo">
@@ -134,13 +134,13 @@
 
     <div id="vermas">
 
-        <button class="filtrar" data-target="menufiltros-ofertas">
+        <button class="filtrar" data-target="menufiltros-ofertas" aria-label="Filtrar">
             <i class="fa-solid fa-filter"></i>
             <span class="testo">Filtrar</span>
         </button>
 
         <h3 class="ver">Ofertas del día</h3>
-        <button onclick="location.href='catalogo3.html'" class="mas">Ver más</button>
+        <button onclick="location.href='catalogo3.html'" class="mas" aria-label="Ver más">Ver más</button>
     </div>
 
     <section class="categoria principal" id="OfertasDelDia">
@@ -205,9 +205,9 @@
 
         <div class="btnfiltross">
 
-            <button type="button" id="limpiarfiltros-vendido" class="limpiar">Limpiar filtros</button>
+            <button type="button" id="limpiarfiltros-vendido" class="limpiar" aria-label="Limpiar filtros">Limpiar filtros</button>
 
-            <button type="button" id="aplicarfiltros-vendido" class="limpiar">Aplicar filtros</button>
+            <button type="button" id="aplicarfiltros-vendido" class="limpiar" aria-label="Aplicar filtros">Aplicar filtros</button>
 
         </div>
 
@@ -1053,7 +1053,7 @@ ofertas                </ul>
             <div class="cerrar">
                 X
             </div>
-            <img src="" class="pluc">
+            <img src="" class="pluc" alt="Producto del modal">
                 <p class="tula"></p>
                 <p class="marca"></p>
                 <p class="descripcion"></p>
@@ -1113,7 +1113,7 @@ ofertas                </ul>
         <div class="col-lg-5">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.99144060821!2d2.292292615509614!3d48.85837360866178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTorre%20Eiffel!5e0!3m2!1ses!2smx!4v1624523797308!5m2!1ses!2smx"
-                    class="h-100 w-100" style="border:0;" allowfullscreen="" loading="lazy">
+                    class="h-100 w-100" style="border:0;" allowfullscreen="" loading="lazy" title="Ubicación de la empresa">
                 </iframe>
         </div>
    
