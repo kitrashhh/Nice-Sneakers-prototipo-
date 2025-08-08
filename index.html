@@ -13,6 +13,9 @@
     <script type="module" src="buscador.js" defer></script>
     <script type="module" src="wasa.js"></script>
     <script src="https://kit.fontawesome.com/13cae7644c.js" crossorigin="anonymous"></script>
+    <meta name="descripcion" content="Tienda online de sneakers para todas las edades, desde bebés hasta adultos. Encuentra tus sneakers favoritos y lúcelos">
+    <meta name="keywords" content="zapatos casuales, zapatos deportivos">
+    <meta name="author" content="Kristal, Miguel Angel y Angel Gabriel">
     <title>Nice Sneakers</title>
 </head>
 <body>
@@ -90,7 +93,7 @@
     <div id="buscador">
 
         <input type="search" id="busca" placeholder="Busque aquí...">
-        <button id="srch"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <button id="srch" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
 
     </div>
 
@@ -1047,13 +1050,13 @@ ofertas                </ul>
 
     <!--Modal del item seleccionado-->
 
-    <div class="preview">
+    <div class="preview" role="dialog" aria-label="Vista previa del producto">
 
         <div class="comtenido">
-            <div class="cerrar">
+            <div class="cerrar" role="button" aria-label="Cerrar vista previa">
                 X
             </div>
-            <img src="" class="pluc" alt="Producto del modal">
+            <img src="" class="pluc" alt="Producto del modal" loading="lazy">
                 <p class="tula"></p>
                 <p class="marca"></p>
                 <p class="descripcion"></p>
