@@ -116,8 +116,16 @@ async function abrirModal(productoId) {
   //producto: datos del producto
   const producto = docSnap.data();
 
+  const imgModal = modal.querySelector(".pluc");
+  imgModal.src = producto.imagen || "fallback.jpg"; //blindaje si no hay imagen
+
+  const nombre = producto.nombre || "Producto";
+  const categoria = producto.categoria || "sin categoria";
+  imgModal.alt = `Imagen de ${nombre} de la o las categorias ${categoria}`;
+  imgModal.loading = "lazy"; //el Lazy mejroa el rendimiento
+
+
   //actualiza el modal con los datos del producto
-  modal.querySelector(".pluc").src = producto.imagen;
   modal.querySelector(".tula").textContent = producto.nombre;
   modal.querySelector(".marca").textContent = producto.marca;
   modal.querySelector(".descripcion").textContent = producto.descripcion;
