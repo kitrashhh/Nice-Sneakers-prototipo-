@@ -10,11 +10,11 @@
     border-radius: 3px;
 }
 
-button{
-    padding: 10px;
-}
-
 /*fondo de pantalla*/
+
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background: #cfdbe2;
@@ -138,7 +138,7 @@ display: none;
     font-weight: 500;
     margin-top: 170px;
     color: #112170;
-    padding: 10px;
+    padding: 15px;
     cursor: pointer;
     transition: all .3s ease;
 }
@@ -150,6 +150,7 @@ display: none;
     transition: all .3s ease;
 }
 
+
 /*division regresar y menu filtros*/
 
 .division{
@@ -157,7 +158,7 @@ display: none;
     justify-content: space-between;
     align-items: center;
     padding: 20px 25px;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 /*boton d regresar*/
@@ -302,7 +303,8 @@ display: none;
 
 .filtros ul{
     list-style: none;
-    padding-bottom: 30px;
+    padding-bottom: 40px;
+    margin-top: 5%;
 }
 
 .filtros ul li label{
@@ -359,55 +361,23 @@ display: none;
 }
 
 .menver input[type="checkbox"]:checked + label {
-  border-radius: 10px;
   border: 2px solid #cfdbe2;
+  border-radius: 10px;
   padding: 10px;
-    transition: all .3s ease;
-
+  transition: all .3s ease;
 }
 
-/*LO MAS VENDIDO*/
-
 input#talla[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
+    max-height: 500px;
 }
 
 input#color[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
+    max-height: 500px;
 }
 
 input#marca[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
+    max-height: 500px;
 }
-
-/*LO MAS NUEVO*/
-
-input#talla-nuevo[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
-input#color-nuevo[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
-input#marca-nuevo[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
-/*OFERTASD DEL DIA*/
-
-input#talla-ofertas[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
-input#color-ofertas[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
-input#marca-ofertas[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
 
 /*categoria uwu*/
 
@@ -419,7 +389,7 @@ input#marca-ofertas[type="checkbox"]:checked + label + .menver{
     transition: .3s;
 }
 
-.categoria:not(.principal){
+.categoria{
     font-family: 'Montserrat';
     display: grid; /* activa en modo grid, rejilla flexible*/
     grid-template-columns: repeat(4, 1fr); /*crea 4 columnas iguales, y 1 fr es una fraccion del espacio disponible*/
@@ -454,6 +424,11 @@ input#marca-ofertas[type="checkbox"]:checked + label + .menver{
     transform: scale(.90); 
 }
 
+.fila{
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
 
 .potaxie{
   font-size: 15px;
@@ -465,7 +440,6 @@ input#marca-ofertas[type="checkbox"]:checked + label + .menver{
     font-weight: 500;
     color: #47748d
 }
-
 
 /*del item seleccionado*/
 
@@ -558,7 +532,6 @@ input#marca-ofertas[type="checkbox"]:checked + label + .menver{
 }
 
 .preview .comtenido a{
-    text-decoration: none;
     border-radius: 15px;
     border: none;
     padding: 15px;
@@ -566,9 +539,6 @@ input#marca-ofertas[type="checkbox"]:checked + label + .menver{
     cursor: pointer;
 }
 
-.preview .comtenido button:hover{
-    background: #4d88df;
-}
 
 .preview .comtenido .detalles{
     display: flex;
@@ -604,7 +574,9 @@ input#marca-ofertas[type="checkbox"]:checked + label + .menver{
     color: #f3fafe;
     font-weight: 500;
     font-size: 1rem;
+
 }
+
  /*fondo borroso al abrir item*/
 
  /*.fondo-borroso {
@@ -782,6 +754,7 @@ hr{
     grid-template-columns: repeat(2, 1fr); /*crea 4 columnas iguales, y 1 fr es una fraccion del espacio disponible*/
 }
 
+
     /*modal*/
 
     .presio{
@@ -914,7 +887,7 @@ hr{
 
     /*menu de filtros*/
 
-        .filtros{
+    .filtros{
         position: fixed;
         top: 80px;
         right: 0%;
@@ -950,36 +923,15 @@ hr{
         display: flex;
         justify-content: space-between;
     }
-
-    /*banner*/
-
-    .photo{
-        height: 300px;
-    }
-
-    #banner{
-        height: 300px;
-    }
-
-    #banner .ban{
-        margin-bottom: 0px;
-        font-size: 0.8rem;
-        padding: 10px;
-    }
-
-    #banner h3{
-        font-size: 1.3rem;
-        margin-bottom: -30px;
-    }
-
-        /*division regresar y menu filtros*/
+    
+    /*division regresar y menu filtros*/
 
     .division{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 25px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
     /*boton de regresar*/
@@ -1028,24 +980,39 @@ hr{
     /*buscador*/
 
     #buscador{
-        text-align: center;
+        margin-top: 3%;
     }
 
     #buscador input{
         width: 65%;
+        margin-left: 4%;
     }
 
     #buscador button{
         position: absolute;
-        right: 19%;
+        right: 17%;
     }
 
-    /*categoria*/
+    /*banner*/
 
-    .categoria{
-    grid-template-columns: 1fr; /*crea 4 columnas iguales, y 1 fr es una fraccion del espacio disponible*/
-    padding: 30px;
-}
+    .photo{
+        height: 300px;
+    }
+
+    #banner{
+        height: 300px;
+    }
+
+    #banner .ban{
+        margin-bottom: 0px;
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    #banner h3{
+        font-size: 1.3rem;
+        margin-bottom: -30px;
+    }
 
     /*modal*/
 
@@ -1095,6 +1062,7 @@ hr{
     background: #31d367;
 }
 
+
     /*el pie de pagina*/
 
     footer{
@@ -1105,7 +1073,7 @@ hr{
         flex-direction: column;
         align-items: center;
         padding: 30px 10px;
-        gap: 30px;
+        gap: 20px;
     }
 
     .dibu{
@@ -1148,12 +1116,10 @@ hr{
         margin-top: 15%;
     }
 
-    #owo{
-        width: 85%;
-        margin: 2.5% auto;
-        margin-top: 5%;
-        padding: 20px;
-    }
+    .categoria{
+    grid-template-columns: 1fr; /*crea 4 columnas iguales, y 1 fr es una fraccion del espacio disponible*/
+    padding: 30px;
+}
 
     
 }
