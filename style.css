@@ -640,7 +640,7 @@ input#marca-ofertas[type="checkbox"]:checked + label + .menver{
     margin-bottom: 5%;
 }
 
-.categorias h2{
+.categorias h1{
     font-weight: 600;
     text-align: center;
     font-size: 30px;
@@ -673,7 +673,7 @@ input#marca-ofertas[type="checkbox"]:checked + label + .menver{
     cursor: pointer;
 }
 
-.categorias .categorias-cont .cat h3{
+.categorias .categorias-cont .cat h2{
     margin: 15px 0;
     font-size: 25px;
     font-weight: 500;
@@ -710,7 +710,7 @@ input#marca-ofertas[type="checkbox"]:checked + label + .menver{
 }
 
 /*categorias generales animacion*/
-.cat:hover h3{
+.cat:hover h2{
     transform: translateY(-1.5rem);
     opacity: 0;
 }
@@ -828,7 +828,7 @@ iframe{
         font-size: 1rem;
     }
 
-    #banner h3{
+    #banner h1{
         font-size: 2rem;
         margin-bottom: 0px;
     }
@@ -1051,7 +1051,7 @@ iframe{
         padding: 10px;
     }
 
-    #banner h3{
+    #banner h1{
         font-size: 1.3rem;
         margin-bottom: -30px;
     }
