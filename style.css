@@ -29,6 +29,12 @@ body{
     box-sizing: border-box;
 }
 
+/*transition para estos botones*/
+.mas, .filtrar, .filtros .limpiar, .preview .comtenido a, 
+.dibu a, nav ul li a{
+    transition: all .3s ease;
+}
+
 /*panel de navegacion*/
 
 nav{
@@ -55,7 +61,6 @@ nav ul li a{
     color: #cfdbe2;
     text-decoration: none;
     padding: 0 15px;
-    transition: all .3s ;
     padding-bottom: 8px;
 }
 
@@ -222,7 +227,6 @@ display: none;
     padding: 10px;
     border: 2px solid #1c4583;
     cursor:pointer;
-    transition: all .3s ease;
 }
 
 .mas:hover{
@@ -253,7 +257,6 @@ display: none;
     border: #1c4583;
     color: #cfdbe2;
     cursor: pointer;
-    transition: all .3s ease;
 }
 
 .filtrar:hover{
@@ -273,7 +276,6 @@ display: none;
     font-size: 1.5rem;
     padding: 10px;
     cursor: pointer;
-    transition: all .3s ease;
 }
 
 .filtros .limpiar:hover{
@@ -387,45 +389,11 @@ display: none;
   transition: all .3s ease;
 }
 
-/*LO MAS VENDIDO*/
+/*PARA EL MENU DE CADA CATEGORIA*/
 
-input#talla[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
-input#color[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
-input#marca[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
-/*LO MAS NUEVO*/
-
-input#talla-nuevo[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
-input#color-nuevo[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
-input#marca-nuevo[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
-/*OFERTASD DEL DIA*/
-
-input#talla-ofertas[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
-input#color-ofertas[type="checkbox"]:checked + label + .menver{
-    max-height: 800px;
-}
-
-input#marca-ofertas[type="checkbox"]:checked + label + .menver{
+input[id^="talla"][type="checkbox"]:checked + label + .menver,
+input[id^="color"][type="checkbox"]:checked + label + .menver,
+input[id^="marca"][type="checkbox"]:checked + label + .menver{
     max-height: 800px;
 }
 
@@ -514,8 +482,7 @@ input#marca-ofertas[type="checkbox"]:checked + label + .menver{
 
 .preview{
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     display: none;
     align-items: center;
@@ -577,7 +544,6 @@ input#marca-ofertas[type="checkbox"]:checked + label + .menver{
     padding: 15px;
     background: #5f9af3;
     cursor: pointer;
-    transition: transform 0.3s;
 }
 
 .preview .comtenido .detalles{
@@ -771,7 +737,6 @@ i{
     cursor: pointer;
     text-decoration: none;
     color: #cfdbe2;
-    transition: all .3s;
 }
 
 .dibu a:hover{
@@ -878,17 +843,6 @@ iframe{
     margin-bottom: 30px;
 }
 
-.preview .comtenido button{
-    border-radius: 15px;
-    border: none;
-    padding: 15px;
-    background: #5f9af3;
-    cursor: pointer;
-}
-
-.preview .comtenido button:hover{
-    background: #4d88df;
-}
 
 .preview .comtenido .was{
     border-radius: 15px;
@@ -899,36 +853,11 @@ iframe{
 
     /*el pie de pagina*/
 
-    footer{
-        text-align: center;
-    }
 
-    .infocja{
-        flex-direction: column;
-        align-items: center;
-        padding: 50px 10px;
-        gap: 30px;
-    }
-
-    .dibu{
-        margin-right: 0;
-        text-align: center;
-    }
 
     .dibu a{
         margin: 10px 5px;
         font-size: 20px;
-    }
-
-    .dib{
-        margin: 0;
-        text-align: center;
-    }
-
-    .log{
-        margin-bottom: -5%;
-        margin: 0;
-        text-align: center;
     }
 
 
@@ -1111,36 +1040,9 @@ iframe{
 
     /*el pie de pagina*/
 
-    footer{
-        text-align: center;
-    }
-
-    .infocja{
-        flex-direction: column;
-        align-items: center;
-        padding: 50px 10px;
-        gap: 30px;
-    }
-
-    .dibu{
-        margin-right: 0;
-        text-align: center;
-    }
-
     .dibu a{
         margin: 10px 5px;
         font-size: 20px;
-    }
-
-    .dib{
-        margin: 0;
-        text-align: center;
-    }
-
-    .log{
-        margin-bottom: -5%;
-        margin: 0;
-        text-align: center;
     }
 
     /*seccion de ofertas*/

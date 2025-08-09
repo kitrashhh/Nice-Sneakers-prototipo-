@@ -113,9 +113,18 @@ function mostrarProductos(productos, idContenedor){
         const div = document.createElement("div"); //crea un div
         div.classList.add("producto"); //clase para estilos
 
+        //extrae el nombre del producto o usa "producto si no esta definido"
+    const nombre = producto.nombre || "producto";
+
+    //convierte el array de categorias separado por comillas
+    const categoria = producto.categoria?.join(", ") || "sin categoria";
+
+    //genera el texto alternativo
+    const altTexto = `imagen de ${nombre} de la o las categorias ${categoria}`;
+
         div.innerHTML = `
             <div class="cont" data-id="${producto.id}">
-            <img src="${producto.imagen}" class="pluc">
+            <img src="${producto.imagen}" class="pluc" alt="${altTexto}" loading="lazy">
             <p class="potaxie">${producto.nombre}</p>
             <p class="fife">$${producto.precio}</p>
             </div>
