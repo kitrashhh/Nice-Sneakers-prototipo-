@@ -1,15 +1,3 @@
-/*para agregar los productos, importa las funciones necesarias de Firebase
-  para inicializar la app y trabajar con Firectore
-*/
-//initializeApp: funcion para inicializarla conexion con FB
-//getFirestore: obtiene la instancia de FS q es la base de datos
-//collection: referencia a una coleccion en FS
-//getDocs: obtiene los docs de una coleccion
-//doc: referencia a un doc en especifico
-//getDoc: obtiene datos de un doc en especifico
-//query: crea una consulta para filtrar datos
-//where: filtra documentos segun la condicion (ej: categoria = "Lo mas vendido")
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getFirestore, collection, getDocs} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 

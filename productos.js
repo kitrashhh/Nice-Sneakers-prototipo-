@@ -77,11 +77,20 @@ async function cargarProductosCategoria(categoria, contenedorId, limite = 5) {
     //producto: datos del doc (nombre, precio, img, etc.)
     const producto = doc.data();
 
+    //extrae el nombre del producto o usa "producto si no esta definido"
+    const nombre = producto.nombre || "producto";
+
+    //convierte el array de categorias separado por comillas
+    const categoria = producto.categoria?.join(", ") || "sin categoria";
+
+    //genera el texto alternativo
+    const altTexto = `imagen de ${nombre} de la o las categorias ${categoria}`;
+
     //se hace la tarjeta del producto y la añade al contenedor
     contenedor.innerHTML += `
     
     <div class="cont" data-id="${doc.id}">
-      <img src="${producto.imagen}" class="pluc">
+      <img src="${producto.imagen}" class="pluc" alt="${altTexto}" loading="lazy">
       <p class="potaxie">${producto.nombre}</p>
       <p class="fife">$${producto.precio}</p>
     </div>

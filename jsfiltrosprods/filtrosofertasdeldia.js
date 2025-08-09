@@ -152,11 +152,6 @@ async function filtrarProds(tallas, colores, marca) {
 //productoId: ID del doc en FS
 async function abrirModal(productoId) {
 
-  if(!productoId){
-    console.error("Error> ID del producto no valido", productoId);
-    return;
-  }
-
   //obtiene el doc del producto especifico desde FS
   //docSnap: referencia al documento del producto en FS
   const docSnap = await getDoc(doc(db, "productos", productoId));
