@@ -23,7 +23,7 @@ body{
 }
 
 *{
-    font-family: 'Montserrat';
+    font-family: 'Montserrat', swap;
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -43,6 +43,7 @@ nav h1{
     position: absolute;
     padding: 20px 50px;
     margin-right: 20px;
+    color: #ffff;
 }
 
 nav ul{
