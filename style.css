@@ -222,7 +222,7 @@ display: none;
     font-weight: 500;
     text-align: center;
     margin-left: 90%;
-    margin-right: 2%;
+    margin-bottom: -20px;
     font-size: 20px;
     border-radius: 10px;
     padding: 10px;
@@ -249,7 +249,7 @@ display: none;
     text-align: center;
     gap: 8px;
     margin-left: 3%;
-    margin-bottom: -2%;
+    margin-bottom: -20px;
     font-size: 20px;
     padding: 10px;
     border-radius: 10px;
@@ -424,6 +424,10 @@ input[id^="marca"][type="checkbox"]:checked + label + .menver{
     padding: 25px;
     background: #ffff;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 320px;
     flex-shrink: 0; /*evita que se achiquen en el scroll*/
 }
 
@@ -433,15 +437,26 @@ input[id^="marca"][type="checkbox"]:checked + label + .menver{
     border-radius: 10px;
 }
 
+.img-wrapper{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
 .pluc{
    margin-top: 10%;
    width: 100%;
    height: auto;
    aspect-ratio: auto;
     border-radius: 10px;
+    object-fit: cover; /*mantiene la proporcion sin deformar*/
  }
 
  .potaxie{
+    margin-top: auto;
   font-size: 15px;
   white-space: nowrap;
   overflow: hidden;
@@ -451,7 +466,8 @@ input[id^="marca"][type="checkbox"]:checked + label + .menver{
 .fife{
   font-size: 18px;
     font-weight: 500;
-  color: #47748d
+  color: #47748d;
+  margin-top: auto;
  }
 
  /* modal del item seleccionado*/
@@ -808,11 +824,12 @@ iframe{
 
     /*boton de filtrar*/
     .filtrar{
-        margin-bottom: -3.5%;
+        margin-bottom: -50px;
         text-align: center;
     }
 
-    #vermas .mas{
+    .mas{
+        margin-bottom: -10px;
         margin-left: 84%;
     }
 
@@ -855,11 +872,39 @@ iframe{
 
     /*el pie de pagina*/
 
+    footer{
+        margin: 0;
+        padding: 0rem;
+    }
 
+    .infocja{
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5px;
+        margin: 0;
+    }
+
+    .dibu{
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+    }
 
     .dibu a{
-        margin: 10px 5px;
         font-size: 20px;
+    }
+
+    .dib{
+        margin: 0;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .log{
+        text-align: center;
+        padding: 1rem;
     }
 
 
@@ -969,7 +1014,9 @@ iframe{
     /*banner*/
 
     .photo{
-        height: 300px;
+        margin-top: 50px;
+        width: 100%;
+        height: 250px;
         aspect-ratio: auto;
     }
 
@@ -978,7 +1025,7 @@ iframe{
     }
 
     #banner .ban{
-        margin-bottom: 0px;
+        margin-bottom: 30px;
         font-size: 0.8rem;
         padding: 10px;
     }
@@ -1084,9 +1131,9 @@ iframe{
         margin-top: 20%;
     }
 
-    #vermas .mas{
+    .mas{
         margin-left: 80%;
-        margin-top: -5%;
+        margin-bottom: 10px;
         font-size: 12px;
     }
 
@@ -1100,7 +1147,7 @@ iframe{
     .filtrar{
         position: absolute;
         display: inline-block;
-        margin-top: -1%;
+        margin-top: 0px;
         font-size: 20px;
     }
 

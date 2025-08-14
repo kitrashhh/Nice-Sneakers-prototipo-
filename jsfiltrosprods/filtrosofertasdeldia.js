@@ -1,15 +1,3 @@
-/*para agregar los productos, importa las funciones necesarias de Firebase
-  para inicializar la app y trabajar con Firectore
-*/
-//initializeApp: funcion para inicializarla conexion con FB
-//getFirestore: obtiene la instancia de FS q es la base de datos
-//collection: referencia a una coleccion en FS
-//getDocs: obtiene los docs de una coleccion
-//doc: referencia a un doc en especifico
-//getDoc: obtiene datos de un doc en especifico
-//query: crea una consulta para filtrar datos
-//where: filtra documentos segun la condicion (ej: categoria = "Lo mas vendido")
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { getFirestore, collection, getDocs, doc, getDoc, query, where} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
@@ -67,8 +55,7 @@ document.getElementById("aplicarfiltros-ofertas").addEventListener("click", asyn
   ]).map(t => parseInt(t)); //hace cada string en numero
   const colores = ObtenerCheks(["kolor1-ofertas", "kolor2-ofertas", "kolor3-ofertas", "kolor4-ofertas", "kolor5-ofertas", "kolor6-ofertas", "kolor7-ofertas", "kolor8-ofertas", "kolor9-ofertas", "kolor10-ofertas", 
     "kolor11-ofertas", "kolor12-ofertas", "kolor13-ofertas", "kolor14-ofertas", "kolor15-ofertas", "kolor16-ofertas", "kolor17-ofertas", "kolor18-ofertas", "kolor19-ofertas", "kolor20-ofertas", 
-    "kolor21-ofertas", "kolor22-ofertas", "kolor23-ofertas", "kolor24-ofertas", "kolor25-ofertas", "kolor26-ofertas", "kolor27-ofertas", "kolor28-ofertas", "kolor29-ofertas", "kolor30-ofertas", 
-    "kolor31-ofertas", "kolor32-ofertas",
+    "kolor21-ofertas", "kolor22-ofertas", "kolor23-ofertas", "kolor24-ofertas", "kolor25-ofertas"
   ]);
   const marca = ObtenerCheks(["marka1-ofertas", "marka2-ofertas", "marka3-ofertas", "marka4-ofertas", "marka5-ofertas", "marka6-ofertas", "marka7-ofertas", "marka8-ofertas", "marka9-ofertas", "marka10-ofertas",]);
 

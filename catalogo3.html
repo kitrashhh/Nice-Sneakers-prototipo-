@@ -18,7 +18,7 @@
 
     <!--menu-->
 
-    <nav>
+    <nav aria-label="Menú de navegación">
             <h1>LyN</h1>
 
             <input type="checkbox" id="menubar">
@@ -28,21 +28,21 @@
             </label>
 
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
-                    <li><a href="hombres.html">Hombres</a></li>
-                    <li><a href="mujeres.html">Mujeres</a></li>
-                    <li><a href="ninos.html">Niños</a></li>
+                    <li><a href="index.html" aria-label="Home">Home</a></li>
+                    <li><a href="sobrenosotros.html" aria-label="Sobre nosotros">Sobre nosotros</a></li>
+                    <li><a href="hombres.html" aria-label="Hombres">Hombres</a></li>
+                    <li><a href="mujeres.html" aria-label="Mujeres">Mujeres</a></li>
+                    <li><a href="ninos.html" aria-label="Niños">Niños</a></li>
                 </ul>
     </nav>
 
     <!--Banner-->
 
     <section id="banner">
-        <img src="productos/flow-clark-AAkK5o8mZMg-unsplash.jpg" class="photo">
+        <img src="productos/flow-clark-AAkK5o8mZMg-unsplash.jpg" class="photo" alt="Ofertas del día">
         <div class="banner-cont">
-       <h3>Ofertas del día</h3>
-       <button class="ban">Ver ahora</button>
+       <h3 aria-label="Ofertas del día">Ofertas del día</h3>
+       <button class="ban" aria-label="Ver ahora">Ver ahora</button>
        </div>
     </div>    
     </section>
@@ -52,11 +52,11 @@
 
         <!--boton de regresar-->
 
-        <a href="index.html" class="fa-solid fa-arrow-left"></a>
+        <a href="index.html" class="fa-solid fa-arrow-left" aria-label="Regresar al inicio"></a>
 
         <!--menu de filtros-->
 
-        <button class="filtrar" data-target="menufiltros-ofertas">
+        <button class="filtrar" data-target="menufiltros-ofertas" aria-label="Filtrar">
             <i class="fa-solid fa-filter"></i>
             <span class="testo">Filtrar</span>
         </button>
@@ -67,8 +67,8 @@
 
     <div id="buscador">
 
-        <button id="srch"><i class="fa-solid fa-magnifying-glass"></i></button>
-        <input type="search" id="busca" placeholder="Busque aquí...">
+        <button id="srch" aria-label="Buscar"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <input type="search" id="busca" placeholder="Busque aquí..." aria-label="Busque los productos">
 
     </div>
 
@@ -86,13 +86,13 @@
 
     <div class="filtros" id="menufiltros-ofertas">
 
-        <span class="cerrar" id="cerrarfiltro-ofertas">X</span>
+        <span class="cerrar" id="cerrarfiltro-ofertas" aria-label="Cerrar filtros">X</span>
 
         <div class="btnfiltross">
 
-            <button type="button" id="limpiarfiltros-ofertas" class="limpiar">Limpiar filtros</button>
+            <button type="button" id="limpiarfiltros-ofertas" class="limpiar" aria-label="Limpiar filtros">Limpiar filtros</button>
 
-            <button type="button" id="aplicarfiltros-ofertas" class="limpiar">Aplicar filtros</button>
+            <button type="button" id="aplicarfiltros-ofertas" class="limpiar" aria-label="Aplicar filtros">Aplicar filtros</button>
 
         </div>
 
@@ -218,31 +218,31 @@
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor9-ofertas">
-                        <label for="kolor9-ofertas">Azul celeste</label>
+                        <label for="kolor9-ofertas">Verde</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor10-ofertas">
-                        <label for="kolor10-ofertas">Rosa pastel</label>
+                        <label for="kolor10-ofertas">Durazno</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor11-ofertas">
-                        <label for="kolor11-ofertas">Azul pastel</label>
+                        <label for="kolor11-ofertas">Dorado</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor12-ofertas">
-                        <label for="kolor12-ofertas">Azul rey</label>
+                        <label for="kolor12-ofertas">Blanco y azul</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor13-ofertas">
-                        <label for="kolor13-ofertas">Verde</label>
+                        <label for="kolor13-ofertas">Naranja y negro</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor14-ofertas">
-                        <label for="kolor14-ofertas">Durazno</label>
+                        <label for="kolor14-ofertas">Naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor15-ofertas">
-                        <label for="kolor15-ofertas">Dorado</label>
+                        <label for="kolor15-ofertas">Rojo y negro</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor16-ofertas">
@@ -250,67 +250,39 @@
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor17-ofertas">
-                        <label for="kolor17-ofertas">Naranja rojizo y negro</label>
+                        <label for="kolor17-ofertas">Vino y negro</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor18-ofertas">
-                        <label for="kolor18-ofertas">Verde menta</label>
+                        <label for="kolor18-ofertas">Gris y blanco</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor19-ofertas">
-                        <label for="kolor19-ofertas">Naranja durazno</label>
+                        <label for="kolor19-ofertas">Blanco y naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor20-ofertas">
-                        <label for="kolor20-ofertas">Rojo y negro</label>
+                        <label for="kolor20-ofertas">Blanco y amarillo</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor21-ofertas">
-                        <label for="kolor21-ofertas">Rosa claro</label>
+                        <label for="kolor21-ofertas">Gris y blanco</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor22-ofertas">
-                        <label for="kolor22-ofertas">Blanco con azul celeste</label>
+                        <label for="kolor22-ofertas">Negro y azul</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor23-ofertas">
-                        <label for="kolor23-ofertas">Vino y negro</label>
+                        <label for="kolor23-ofertas">Negro y naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor24-ofertas">
-                        <label for="kolor24-ofertas">Gris y blanco</label>
+                        <label for="kolor24-ofertas">Azul y naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor25-ofertas">
-                        <label for="kolor25-ofertas">Blanco y naranja</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor26-ofertas">
-                        <label for="kolor26-ofertas">Blanco y amarillo</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor27-ofertas">
-                        <label for="kolor27-ofertas">Gris y blanco</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor28-ofertas">
-                        <label for="kolor28-ofertas">Negro y azul</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor29-ofertas">
-                        <label for="kolor29-ofertas">Azul pantano</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor30-ofertas">
-                        <label for="kolor30-ofertas">Negro y naranja</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor31-ofertas">
-                        <label for="kolor31-ofertas">Azul y naranja</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor32-ofertas">
-                        <label for="kolor32-ofertas">Azul y blanco</label>
+                        <label for="kolor25-ofertas">Azul y blanco</label>
                     </li>
                 </ul>
             </li>
@@ -373,7 +345,7 @@
 <div class="preview">
 
         <div class="comtenido">
-            <div class="cerrar">
+            <div class="cerrar" aria-label="Cerrar modal">
                 X
             </div>
             <img src="" class="pluc">
@@ -394,7 +366,7 @@
                         </select>
                     </div>
 
-                    <a class="was" id="wasaa" target="_blank"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></a>
+                    <a class="was" id="wasaa" target="_blank" aria-label="Contactar al WhatsApp"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></a>
 
             </div>
         </div>
@@ -406,10 +378,10 @@
         <div class="infocja">
             <div class="dibu">
                 <p>Síguenos en nuestras redes</p>
-                <a href="#" class="fa-brands fa-facebook"></a>
-                <a href="#" class="fa-brands fa-instagram"></a>
-                <a href="#" class="fa-brands fa-linkedin"></a>
-                <a href="#" class="fa-brands fa-twitter"></a>
+                <a href="#" aria-label="Facebook de la empresa" class="fa-brands fa-facebook" aria-hidden="false"></a>
+                <a href="#" aria-label="Instagram de la empresa" class="fa-brands fa-instagram" aria-hidden="false"></a>
+                <a href="#" aria-label="Linkedin de la empresa" class="fa-brands fa-linkedin" aria-hidden="false"></a>
+                <a href="#" aria-label="Twitter de la empresa" class="fa-brands fa-twitter" aria-hidden="false"></a>
             </div>
             <div class="dib">
                 <p>Información de contacto &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
@@ -434,7 +406,7 @@
         <div class="col-lg-5">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.99144060821!2d2.292292615509614!3d48.85837360866178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2sTorre%20Eiffel!5e0!3m2!1ses!2smx!4v1624523797308!5m2!1ses!2smx"
-                    class="h-100 w-100" style="border:0;" allowfullscreen="" loading="lazy">
+                    class="h-100 w-100" style="border:0;" allowfullscreen="" loading="lazy" title="Ubicación de la empresa">
                 </iframe>
         </div>
    

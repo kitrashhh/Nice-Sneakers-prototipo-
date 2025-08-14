@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, collection, getDocs} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+import { getFirestore, collection, getDocs, getDoc, doc} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 //config firebase con las credenciales del proyecto
 const firebaseConfig = {
@@ -22,16 +22,34 @@ const db = getFirestore (app);
 //formato de "521" de mexico sin espacios ni caracteres especiales
 const wasaNum = "5218994843635"
 
+
+
 //funcion principal
-async function generarWasa() {
+async function generarWasa(productoId) {
 
-  const querySnapshot = await getDocs(collection(db, "productos"));
+  //capturar talla y color seleccionados
+  //busca el elemento <select> dentro de una clase llamada .size y obtiene el valor seleccionado
+  //lo mismo con .colorr
+  const tallaElegida = document.querySelector(".size").value;
+  const colorElegido = document.querySelector(".colorr").value;
 
-  const doc = querySnapshot.docs[0];
-  const producto = doc.data();
+  //crea una referencia al documento de firestore usando el ID rcibido
+  const docRef = doc(db, "productos", productoId);
+
+  //espera la respuesta del servidor y obtiene el documento completo
+  const docSnap = await getDoc(docRef);
+
+  //extrae los datos como un objeto de javascript
+  const producto = docSnap.data();
 
   //mensaje personalizado
-  const mensaje = `Hola, me interesan estos tenis: \n *${producto.nombre}* \n Marca: ${producto.marca} \n Precio: $ ${producto.precio} \n Imagen: ${producto.imagen}`;
+  const mensaje = `Hola, me interesan estos tenis: 
+  \n *${producto.nombre}* 
+  \n Marca: ${producto.marca} 
+  \n Precio: $ ${producto.precio} 
+  \n Talla: ${tallaElegida}
+  \n Color: ${colorElegido}
+  \n Imagen: ${producto.imagen}`;
 
   //codifica el mensaje para que se pueda enviar por URL
   //encodeURIComponent convierte caracteres especiales en formato seguro para URLs

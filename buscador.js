@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, collection, getDocs} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+import { getFirestore, collection, getDocs, getDoc, doc} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
 //config firebase con las credenciales del proyecto
 const firebaseConfig = {
@@ -17,6 +17,58 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 //db: instancia de FS para interactuar con la base de datos
 const db = getFirestore (app);
+
+//previewContainer: Contenedor del modal
+const previewContainer = document.querySelector(".preview");
+
+//modal: el modal en si
+const modal = document.querySelector(".comtenido");
+
+//fondoborroso: fondo sdetras del modal
+const fondoBorroso = document.querySelector(".fondo-borroso");
+
+//funcion para abrir/actualizar el modal con los detalles del producto
+//productoId: ID del doc en FS
+async function abrirModal(productoId) {
+
+  //obtiene el doc del producto especifico desde FS
+  //docSnap: referencia al documento del producto en FS
+  const docSnap = await getDoc(doc(db, "productos", productoId));
+  if (!docSnap.exists()) return; //si no existe, termina
+
+  //producto: datos del producto
+  const producto = docSnap.data();
+
+  //actualiza el modal con los datos del producto
+  modal.querySelector(".pluc").src = producto.imagen;
+  modal.querySelector(".tula").textContent = producto.nombre;
+  modal.querySelector(".marca").textContent = producto.marca;
+  modal.querySelector(".descripcion").textContent = producto.descripcion;
+  modal.querySelector(".presio").textContent = `$${producto.precio}`;
+
+  //actualiza las tallas si existen
+  if (producto.tallas) {
+    const selectTallas = modal.querySelector(".size select"); //el querySelector busca el primer elemento que coincida con el selector
+    selectTallas.innerHTML = producto.tallas.map(t => `<option value="${t}">${t} </option>`).join('');
+    //el map() transforma un array, como convertir tallas en opciones HTML
+
+  }
+
+  //actualizar colores si existen
+  //si el producto tiene tallas, actualiza el <select> en el modal 
+  if(producto.colores){ // asegurarse que el texto despues del . como "colores" sea el mismo que en firebase 
+    const selectColores = modal.querySelector(".colorr select");
+    selectColores.innerHTML = producto.colores.map(c => `<option value="${c}">${c}</option>`).join('');
+  }
+
+  //muestra el modal y el fondo borroso
+  previewContainer.classList.add("activo"); //el classList manipula clases CSS de un elemento, como add("activo")
+  fondoBorroso.classList.remove("oculto");
+
+  modal.classList.add("activo");
+  
+}
+
 
 //funcion que busca productos de firestore segun texto y categoria
 async function buscarFS(textoBusqueda, categoria) {
@@ -124,13 +176,21 @@ function mostrarProductos(productos, idContenedor){
 
         div.innerHTML = `
             <div class="cont" data-id="${producto.id}">
-            <img src="${producto.imagen}" class="pluc" alt="${altTexto}" loading="lazy">
+            <div class="img-wrapper">
+                <img src="${producto.imagen}" class="pluc" alt="${altTexto}" loading="lazy">
+            </div>
             <p class="potaxie">${producto.nombre}</p>
             <p class="fife">$${producto.precio}</p>
             </div>
         `;
 
         contenedor.appendChild(div); //agrega el div al contenedor
+
+        //conecta con clic del modal
+        const tarjeta = div.querySelector(".cont");
+        tarjeta.addEventListener("click", () => {
+            abrirModal(producto.id);
+        });
 
     });
 

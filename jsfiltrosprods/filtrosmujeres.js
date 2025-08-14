@@ -66,8 +66,7 @@ document.getElementById("aplicarfiltros-mujeres").addEventListener("click", asyn
     "taia12", "taia13", "taia14", "taia15", "taia16", "taia17", "taia18", "taia19"
   ]).map(t => parseInt(t)); //hace cada string en numero
   const colores = ObtenerCheks(["kolor1", "kolor2", "kolor3", "kolor4", "kolor5", "kolor6", "kolor7", "kolor8", "kolor9", "kolor10", "kolor11", 
-    "kolor12", "kolor13", "kolor14", "kolor15", "kolor16", "kolor17", "kolor18", "kolor19", "kolor20", "kolor21", "kolor22", "kolor23", "kolor24", "kolor25", 
-    "kolor26", "kolor27", "kolor28", "kolor29", "kolor30", "kolor31", "kolor32",
+    "kolor12", "kolor13", "kolor14", "kolor15", "kolor16", "kolor17", "kolor18", "kolor19", "kolor20", "kolor21", "kolor22", "kolor23", "kolor24", "kolor25"
   ]);
   const marca = ObtenerCheks(["marka1", "marka2", "marka3", "marka4", "marka5", "marka6", "marka7", "marka8", "marka9", "marka10",]);
 

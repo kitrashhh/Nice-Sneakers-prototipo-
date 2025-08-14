@@ -59,7 +59,7 @@
 
     <!--Menu-->
 
-    <nav>
+    <nav aria-label="Menú de navegación">
             <h1>LyN</h1>
 
             <input type="checkbox" id="menubar">
@@ -69,21 +69,21 @@
             </label>
 
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="sobrenosotros.html">Sobre nosotros</a></li>
-                    <li><a href="hombres.html">Hombres</a></li>
-                    <li><a href="mujeres.html">Mujeres</a></li>
-                    <li><a href="ninos.html">Niños</a></li>
+                    <li><a href="index.html" aria-label="Home">Home</a></li>
+                    <li><a href="sobrenosotros.html" aria-label="Sobre nosotros">Sobre nosotros</a></li>
+                    <li><a href="hombres.html" aria-label="Hombres">Hombres</a></li>
+                    <li><a href="mujeres.html" aria-label="Mujeres">Mujeres</a></li>
+                    <li><a href="ninos.html" aria-label="Niños">Niños</a></li>
                 </ul>
     </nav>
 
     <!--Banner-->
 
     <section id="banner">
-        <img src="grailify-8GuJ3GzA3nQ-unsplash.webp" class="photo" alt="Imagen del banner">
+        <img src="grailify-8GuJ3GzA3nQ-unsplash.webp" class="photo" alt="Imagen del banner" fetchpriority="high">
         <div class="banner-cont">
-       <h1>Sneakers que hablan por ti</h1>
-       <button class="ban" onclick="document.querySelector('#buscador').scrollIntoView({behavior: 'smooth'})" aria-label="Ver ahora">Ver ahora</button>
+       <h1 aria-label="Sneakers que hablan por ti">Sneakers que hablan por ti</h1>
+       <button class="ban" onclick="location.href='categoria1.html'" aria-label="Ver categoría destacada">Ver categoría destacada</button>
        </div>
     </div>    
     </section>
@@ -121,13 +121,14 @@
 
     <div id="vermas">
 
-        <button class="filtrar" data-target="menufiltros-nuevo" aria-label="Filtrar">
-            <i class="fa-solid fa-filter"></i>
-            <span class="testo">Filtrar</span>
-        </button>
+            <button class="filtrar" data-target="menufiltros-nuevo" aria-label="Filtrar">
+                <i class="fa-solid fa-filter"></i>
+                <span class="testo">Filtrar</span>
+            </button>
 
-        <h1 class="ver">Lo más nuevo</h1>
-        <button onclick="location.href='catalogo2.html'" class="mas" aria-label="Ver más">Ver más</button>
+            <h1 class="ver">Lo más nuevo</h1>
+
+            <button onclick="location.href='catalogo2.html'" class="mas" aria-label="Ver más">Ver más</button>
     </div>
 
     <section class="categoria principal" id="LoMasNuevo">
@@ -204,7 +205,7 @@
 
     <div class="filtros" id="menufiltros">
 
-        <span class="cerrar" id="cerrarfiltro">X</span>
+        <span class="cerrar" id="cerrarfiltro" aria-label="Cerrar filtros">X</span>
 
         <div class="btnfiltross">
 
@@ -336,31 +337,31 @@
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor9">
-                        <label for="kolor9">Azul celeste</label>
+                        <label for="kolor9">Verde</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor10">
-                        <label for="kolor10">Rosa pastel</label>
+                        <label for="kolor10">Durazno</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor11">
-                        <label for="kolor11">Azul pastel</label>
+                        <label for="kolor11">Dorado</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor12">
-                        <label for="kolor12">Azul rey</label>
+                        <label for="kolor12">Blanco y azul</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor13">
-                        <label for="kolor13">Verde</label>
+                        <label for="kolor13">Naranja y negro</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor14">
-                        <label for="kolor14">Durazno</label>
+                        <label for="kolor14">Naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor15">
-                        <label for="kolor15">Dorado</label>
+                        <label for="kolor15">Rojo y negro</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor16">
@@ -368,67 +369,39 @@
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor17">
-                        <label for="kolor17">Naranja rojizo y negro</label>
+                        <label for="kolor17">Vino y negro</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor18">
-                        <label for="kolor18">Verde menta</label>
+                        <label for="kolor18">Gris y blanco</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor19">
-                        <label for="kolor19">Naranja durazno</label>
+                        <label for="kolor19">Blanco y naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor20">
-                        <label for="kolor20">Rojo y negro</label>
+                        <label for="kolor20">Blanco y amarillo</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor21">
-                        <label for="kolor21">Rosa claro</label>
+                        <label for="kolor21">Gris y blanco</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor22">
-                        <label for="kolor22">Blanco con azul celeste</label>
+                        <label for="kolor22">Negro y azul</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor23">
-                        <label for="kolor23">Vino y negro</label>
+                        <label for="kolor23">Negro y naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor24">
-                        <label for="kolor24">Gris y blanco</label>
+                        <label for="kolor24">Azul y naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor25">
-                        <label for="kolor25">Blanco y naranja</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor26">
-                        <label for="kolor26">Blanco y amarillo</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor27">
-                        <label for="kolor27">Gris y blanco</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor28">
-                        <label for="kolor28">Negro y azul</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor29">
-                        <label for="kolor29">Azul pantano</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor30">
-                        <label for="kolor30">Negro y naranja</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor31">
-                        <label for="kolor31">Azul y naranja</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor32">
-                        <label for="kolor32">Azul y blanco</label>
+                        <label for="kolor25">Azul y blanco</label>
                     </li>
                 </ul>
             </li>
@@ -486,13 +459,13 @@
 
     <div class="filtros" id="menufiltros-nuevo">
 
-        <span class="cerrar" id="cerrarfiltro-nuevo">X</span>
+        <span class="cerrar" id="cerrarfiltro-nuevo" aria-label="Cerrar filtros">X</span>
 
         <div class="btnfiltross">
 
-            <button type="button" id="limpiarfiltros-nuevo" class="limpiar">Limpiar filtros</button>
+            <button type="button" id="limpiarfiltros-nuevo" class="limpiar" aria-label="Limpiar filtros">Limpiar filtros</button>
 
-            <button type="button" id="aplicarfiltros-nuevo" class="limpiar">Aplicar filtros</button>
+            <button type="button" id="aplicarfiltros-nuevo" class="limpiar" aria-label="Aplicar filtros">Aplicar filtros</button>
 
         </div>
 
@@ -618,31 +591,31 @@
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor9-nuevo">
-                        <label for="kolor9-nuevo">Azul celeste</label>
+                        <label for="kolor9-nuevo">Verde</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor10-nuevo">
-                        <label for="kolor10-nuevo">Rosa pastel</label>
+                        <label for="kolor10-nuevo">Durazno</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor11-nuevo">
-                        <label for="kolor11-nuevo">Azul pastel</label>
+                        <label for="kolor11-nuevo">Dorado</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor12-nuevo">
-                        <label for="kolor12-nuevo">Azul rey</label>
+                        <label for="kolor12-nuevo">Blanco y azul</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor13-nuevo">
-                        <label for="kolor13-nuevo">Verde</label>
+                        <label for="kolor13-nuevo">Naranja y negro</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor14-nuevo">
-                        <label for="kolor14-nuevo">Durazno</label>
+                        <label for="kolor14-nuevo">Naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor15-nuevo">
-                        <label for="kolor15-nuevo">Dorado</label>
+                        <label for="kolor15-nuevo">Rojo y negro</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor16-nuevo">
@@ -650,67 +623,39 @@
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor17-nuevo">
-                        <label for="kolor17-nuevo">Naranja rojizo y negro</label>
+                        <label for="kolor17-nuevo">Vino y negro</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor18-nuevo">
-                        <label for="kolor18-nuevo">Verde menta</label>
+                        <label for="kolor18-nuevo">Gris y blanco</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor19-nuevo">
-                        <label for="kolor19-nuevo">Naranja durazno</label>
+                        <label for="kolor19-nuevo">Blanco y naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor20-nuevo">
-                        <label for="kolor20-nuevo">Rojo y negro</label>
+                        <label for="kolor20-nuevo">Blanco y amarillo</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor21-nuevo">
-                        <label for="kolor21-nuevo">Rosa claro</label>
+                        <label for="kolor21-nuevo">Gris y blanco</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor22-nuevo">
-                        <label for="kolor22-nuevo">Blanco con azul celeste</label>
+                        <label for="kolor22-nuevo">Negro y azul</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor23-nuevo">
-                        <label for="kolor23-nuevo">Vino y negro</label>
+                        <label for="kolor23-nuevo">Negro y naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor24-nuevo">
-                        <label for="kolor24-nuevo">Gris y blanco</label>
+                        <label for="kolor24-nuevo">Azul y naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor25-nuevo">
-                        <label for="kolor25-nuevo">Blanco y naranja</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor26-nuevo">
-                        <label for="kolor26-nuevo">Blanco y amarillo</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor27-nuevo">
-                        <label for="kolor27-nuevo">Gris y blanco</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor28-nuevo">
-                        <label for="kolor28-nuevo">Negro y azul</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor29-nuevo">
-                        <label for="kolor29-nuevo">Azul pantano</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor30-nuevo">
-                        <label for="kolor30-nuevo">Negro y naranja</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor31-nuevo">
-                        <label for="kolor31-nuevo">Azul y naranja</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor32-nuevo">
-                        <label for="kolor32-nuevo">Azul y blanco</label>
+                        <label for="kolor25-nuevo">Azul y blanco</label>
                     </li>
                 </ul>
             </li>
@@ -766,13 +711,13 @@
 
     <div class="filtros" id="menufiltros-ofertas">
 
-        <span class="cerrar" id="cerrarfiltro-ofertas">X</span>
+        <span class="cerrar" id="cerrarfiltro-ofertas" aria-label="Cerrar filtros">X</span>
 
         <div class="btnfiltross">
 
-            <button type="button" id="limpiarfiltros-ofertas" class="limpiar">Limpiar filtros</button>
+            <button type="button" id="limpiarfiltros-ofertas" class="limpiar" aria-label="Limpiar filtros">Limpiar filtros</button>
 
-            <button type="button" id="aplicarfiltros-ofertas" class="limpiar">Aplicar filtros</button>
+            <button type="button" id="aplicarfiltros-ofertas" class="limpiar" aria-label="Aplicar filtros">Aplicar filtros</button>
 
         </div>
 
@@ -898,31 +843,31 @@
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor9-ofertas">
-                        <label for="kolor9-ofertas">Azul celeste</label>
+                        <label for="kolor9-ofertas">Verde</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor10-ofertas">
-                        <label for="kolor10-ofertas">Rosa pastel</label>
+                        <label for="kolor10-ofertas">Durazno</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor11-ofertas">
-                        <label for="kolor11-ofertas">Azul pastel</label>
+                        <label for="kolor11-ofertas">Dorado</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor12-ofertas">
-                        <label for="kolor12-ofertas">Azul rey</label>
+                        <label for="kolor12-ofertas">Blanco y azul</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor13-ofertas">
-                        <label for="kolor13-ofertas">Verde</label>
+                        <label for="kolor13-ofertas">Naranja y negro</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor14-ofertas">
-                        <label for="kolor14-ofertas">Durazno</label>
+                        <label for="kolor14-ofertas">Naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor15-ofertas">
-                        <label for="kolor15-ofertas">Dorado</label>
+                        <label for="kolor15-ofertas">Rojo y negro</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor16-ofertas">
@@ -930,67 +875,39 @@
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor17-ofertas">
-                        <label for="kolor17-ofertas">Naranja rojizo y negro</label>
+                        <label for="kolor17-ofertas">Vino y negro</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor18-ofertas">
-                        <label for="kolor18-ofertas">Verde menta</label>
+                        <label for="kolor18-ofertas">Gris y blanco</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor19-ofertas">
-                        <label for="kolor19-ofertas">Naranja durazno</label>
+                        <label for="kolor19-ofertas">Blanco y naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor20-ofertas">
-                        <label for="kolor20-ofertas">Rojo y negro</label>
+                        <label for="kolor20-ofertas">Blanco y amarillo</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor21-ofertas">
-                        <label for="kolor21-ofertas">Rosa claro</label>
+                        <label for="kolor21-ofertas">Gris y blanco</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor22-ofertas">
-                        <label for="kolor22-ofertas">Blanco con azul celeste</label>
+                        <label for="kolor22-ofertas">Negro y azul</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor23-ofertas">
-                        <label for="kolor23-ofertas">Vino y negro</label>
+                        <label for="kolor23-ofertas">Negro y naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor24-ofertas">
-                        <label for="kolor24-ofertas">Gris y blanco</label>
+                        <label for="kolor24-ofertas">Azul y naranja</label>
                     </li>
                     <li tabindex="0">
                         <input type="checkbox" id="kolor25-ofertas">
-                        <label for="kolor25-ofertas">Blanco y naranja</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor26-ofertas">
-                        <label for="kolor26-ofertas">Blanco y amarillo</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor27-ofertas">
-                        <label for="kolor27-ofertas">Gris y blanco</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor28-ofertas">
-                        <label for="kolor28-ofertas">Negro y azul</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor29-ofertas">
-                        <label for="kolor29-ofertas">Azul pantano</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor30-ofertas">
-                        <label for="kolor30-ofertas">Negro y naranja</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor31-ofertas">
-                        <label for="kolor31-ofertas">Azul y naranja</label>
-                    </li>
-                    <li tabindex="0">
-                        <input type="checkbox" id="kolor32-ofertas">
-                        <label for="kolor32-ofertas">Azul y blanco</label>
+                        <label for="kolor25-ofertas">Azul y blanco</label>
                     </li>
                 </ul>
             </li>
@@ -1074,7 +991,7 @@
                         </select>
                     </div>
 
-                    <a class="was" id="wasaa" target="_blank"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></a>
+                    <a class="was" id="wasaa" target="_blank" aria-label="Contactar al WhatsApp"><i class="fa-brands fa-whatsapp"></i><span class="contact">Contactar</span></a>
 
             </div>
         </div>
